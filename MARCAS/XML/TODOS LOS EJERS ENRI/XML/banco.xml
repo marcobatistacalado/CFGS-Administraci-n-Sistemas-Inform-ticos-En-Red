@@ -1,0 +1,39 @@
+<?xml version=”1.0”>
+<banco>
+    <sucursal>
+        <número>012</número>
+        <dirección>
+        <tipo de vía>calle</tipo de vía>
+        <nombre>San Benito</nombre>
+        <número>
+        <población tipo=ciudad>Madrid</población>
+
+        </dirección>
+        <director>
+
+        <nombre>Jose</nombre>
+        <apellido>Recio</apellidos>
+
+        <director>
+        </sucursal>
+        <sucursal>
+        <número>902</número>
+        <dirección>
+        <tipo de vía>Avenida</tipo de vía>
+        <nombre>Ferrocarril</nombre>
+        <número>7
+        <población tipo=pequeña>Moral</población>
+
+        </dirección>
+        
+        <director>
+
+        Ejercicios XML 2
+
+        <nombre>Ana</nombre>
+        <1apellido>Fuentes</1apellido>
+
+        <director>
+    </sucursal>
+
+</banco>

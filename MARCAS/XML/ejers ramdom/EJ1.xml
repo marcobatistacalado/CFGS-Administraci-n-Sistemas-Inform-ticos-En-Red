@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE grupo SYSTEM "EJ1.dtd">
+<grupo>
+    <nombre>Fito y Fitipaldis</nombre>
+    <disco>
+        <titulo>Por la boca muere el pez</titulo>
+        <tema>Me equivocaría otra vez</tema>
+        <tema>Como pollo sin cabeza</tema>
+        <tema>Sobra la luz</tema>
+        <año>2006</año>
+    </disco>
+    <disco>
+        <titulo>Lo más lejos a tu lado</titulo>
+    </disco>
+</grupo>

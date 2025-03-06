@@ -1,0 +1,7 @@
+<xsl:for-each select="//Vuelo">
+    <xsl:sort select="Origen"/>
+    <xsl:value-of select="Codigo"/>
+    <xsl:value-of select="Origen"/>
+    <xsl:value-of select="Destino"/>
+    <xsl:value-of select="//Pasajero/Numero[@tipo="ventanilla"]"/>
+</xsl:for-each>

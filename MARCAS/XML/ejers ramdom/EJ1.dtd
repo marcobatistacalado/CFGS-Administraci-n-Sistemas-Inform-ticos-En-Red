@@ -1,0 +1,6 @@
+<!ELEMENT grupo (nombre,disco+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT disco (titulo,tema*,año?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT tema (#PCDATA)>
+<!ELEMENT año (#PCDATA)>

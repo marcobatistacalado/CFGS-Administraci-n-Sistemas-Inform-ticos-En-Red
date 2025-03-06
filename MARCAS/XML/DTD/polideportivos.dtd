@@ -1,0 +1,17 @@
+<!ELEMENT polideportivos (ciudad,polideportivo+)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT polideportivo (nombre,direccion,precio-hora?,pista*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT precio-hora (#PCDATA)>
+<!ELEMENT pista (numero,(padel|tenis),cubierta,reserva*)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT padel EMPTY>
+<!ELEMENT cubierta (#PCDATA)>
+<!ELEMENT tenis EMPTY>
+<!ELEMENT reserva (fecha,hora-ini,hora-fin,luz?,nombre,numerosocio?)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora-ini (#PCDATA)>
+<!ELEMENT hora-fin (#PCDATA)>
+<!ELEMENT luz EMPTY>
+<!ELEMENT numerosocio (#PCDATA)>

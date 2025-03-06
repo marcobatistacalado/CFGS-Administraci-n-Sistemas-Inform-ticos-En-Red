@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="nota">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="para" type="xs:string"  fixed="Pedro"/>
+                <xs:element name="de" type="xs:string" />
+                <xs:element name="cabecera" type="xs:string" />
+                <xs:element name="mensaje" type="xs:string" />
+                <xs:element name="edad" type="xs:integer"/>
+                <xs:element name="fecha_nacimiento" type="xs:date"/>
+                <xs:element name="fecha_de_recepcion" type="xs:date"/>
+                <xs:element name="hora" type="xs:time"/>
+                <xs:element name="indicador" type="xs:boolean"/>
+                <xs:element name="nmnesaje" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

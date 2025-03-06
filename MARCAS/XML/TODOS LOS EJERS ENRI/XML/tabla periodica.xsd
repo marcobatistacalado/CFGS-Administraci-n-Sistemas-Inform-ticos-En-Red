@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="tipoEstado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="sólido" />
+            <xs:enumeration value="líquido" />
+            <xs:enumeration value="gaseoso" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNombre">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoSimbolo">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="3" />
+            <xs:pattern value="[A-Z]{1}[a-z]{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNumero">
+        <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoPeso">
+        <xs:restriction base="xs:decimal"></xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoEbullicion">
+        <xs:restriction base="xs:decimal"></xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoDensidad">
+        <xs:restriction base="xs:decimal"></xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="tabla">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="elemento">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="estado" type="tipoEstado" />
+                            <xs:element name="nombre" type="tipoNombre" />
+                            <xs:element name="simbolo" type="tipoSimbolo" />
+                            <xs:element name="numero" type="tipoNumero" />
+                            <xs:element name="peso_atomico" type="tipoPeso" />
+                            <xs:element name="punto_ebullicion" type="tipoEbullicion" />
+                            <xs:element name="densidad" type="tipoDensidad" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

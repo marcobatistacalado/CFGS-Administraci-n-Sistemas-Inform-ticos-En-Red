@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tarjetavisita>
+	<apellido>DEL VALLE</apellido>
+	<nombre>Cristobal</nombre>
+	<sociedad/>
+	<profesion>Doctorñ</profesion>
+
+	<direccion>
+		<numero>19</numero>
+		<calle>C/ Florida</calle>
+		<codigopostal>18080</codigopostal>
+		<poblacion>MADRID</poblacion>
+	</direccion>
+	<numerotelefono>123456789</numerotelefono>
+	<numeromovil/>
+	<numerofax/>
+	<email/>
+</tarjetavisita>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blue; color: white;">
+    <p style="text-align: center; font-family: arial; font-size: 30px;">
+        <b>REGISTRO USUARIO</b>
+    </p>
+    <form>
+        <fieldset style="width: 600px; margin:auto;">
+            <legend style="text-align: center;">Datos personales</legend>
+            Nombre y apellidos 
+            <input type="text" placeholder="Introduce tu nombre y apellidos" size="30"><br/><br/>
+            Provincia
+            <select name="provincia">
+                <option value="provincia ">Madrid</option> 
+                <option value="provincia " selected>Barcelona</option> 
+                <option value="provincia ">Valencia</option> 
+            </select><br/><br/>
+            fecha nacimiento: 
+            <input type="date" max="2018-12-31"><br/><br/>
+            <input type="checkbox">Empresa<br/><br/>
+            Dirección<br/>
+            <textarea placeholder="Introduzca su dirección completa"name="direccion" rows="4" cols="40" style="margin-left: 60px;"></textarea>
+        </fieldset>
+        <fieldset style="width: 600px; margin:auto;">
+            <legend style="text-align: center;">Datos Usuario</legend>
+            Login
+            <input type="text" required>
+            Password
+            <input type="password" required><br/><br/>
+            <input type="radio" name="tipo" checked>Normal
+            <input type="radio" name="tipo">Vip
+        </fieldset>
+        <br/>
+        <input type="submit" value="Registrarse" style="margin-left: 156px;"><br/>
+        <a href="../index.html" style="color: white; margin-left: 750px;">Atrás</a>
+    </form>
+</body>
+</html>

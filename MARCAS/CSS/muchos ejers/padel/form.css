@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: padel;
+    src: url(./enunciado/amsterdam.ttf);
+}
+
+body{
+    background-image: url(./enunciado/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#menu{
+    height: 50px;
+}
+#menu ul li{
+    list-style-type: none;
+    float: left;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#menu ul li a{
+    width: 15%;
+    font-size: 1.5em;
+    color: white;
+}
+#menu ul li a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: #5c6489;
+}
+#cabecera{
+    height: 120px;
+    text-align: center;
+}
+.titulo{
+    font-size: 100px;
+    font-family: padel;
+    letter-spacing: 0.5em;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+}
+#contenido{
+    width: 90%;
+    margin:auto;
+    background-color: #EEE;
+    overflow: auto;
+    height: auto;
+}
+.borde{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+fieldset{
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    height: 60%;
+    background-image: url(./enunciado/sombra.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    padding-top: 150px;
+}
+legend{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}

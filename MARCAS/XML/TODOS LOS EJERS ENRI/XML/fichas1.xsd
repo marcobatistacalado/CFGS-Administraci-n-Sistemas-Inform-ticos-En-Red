@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="tipoNombre">
+        <xs:restriction base="xs:string"></xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoApellido1">
+        <xs:restriction base="xs:string"></xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoApellido2">
+        <xs:restriction base="xs:string"></xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z][0-9])*([a-zA-Z][0-9]\-)*@([a-zA-Z][0-9])*\.[a-zA-Z]{2}[a-zA-Z]*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:element name="serie">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ficha">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="tipoNombre" />
+                            <xs:element name="apellido1" type="tipoApellido1" />
+                            <xs:element name="apellido2" type="tipoApellido2"/>
+                            <xs:element name="email" type="tipoEmail"/>
+                            <xs:element name="direccion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="calle" />
+                                        <xs:element name="piso" />
+                                        <xs:element name="letra" />
+                                        <xs:element name="cp" />
+                                        <xs:element name="ciudad" />
+                                        <xs:element name="pais" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

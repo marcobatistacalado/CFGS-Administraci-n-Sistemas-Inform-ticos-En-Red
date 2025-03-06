@@ -1,0 +1,8 @@
+<!ELEMENT libro-recetas (receta)+>
+<!ELEMENT receta (titulo,ingrediente+,preparacion,truco?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT ingrediente (#PCDATA)>
+<!ATTLIST ingrediente cantidad CDATA #IMPLIED>
+<!ELEMENT preparacion (#PCDATA)>
+<!ELEMENT truco (#PCDATA)>
+<!ATTLIST preparacion tipo (fácil|difícil) #REQUIRED>

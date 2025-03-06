@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!--<!DOCTYPE libro-direcciones SYSTEM "dtd-direcciones.dtd">-->
+<!DOCTYPE libro-direcciones SYSTEM "dtd-direcciones.dtd">
+<libro-direcciones>
+  <entrada>
+    <!--<nombre>Juan Sanz</nombre>-->
+    <direccion>
+	  <hola/>
+      <calle>San Benito 6</calle>
+      <codigo-postal>28029</codigo-postal>
+      <localidad>Madrid</localidad>
+      <pais>España</pais>
+    </direccion>
+    <tel principal="si">623-27-03-71</tel>
+    <tel>656-23-44-33</tel>
+    <email href="mailto:pepe@gmail.com"/>
+	</entrada>
+	<entrada>
+		<nombre>Carlos Tena</nombre>
+		<tel>513-34-65-35</tel>
+		<email href="mailto:cate@gmail.com"/>
+    <comentarios>Nunca dejar mensajes en su contestador</comentarios>
+  </entrada>
+</libro-direcciones>

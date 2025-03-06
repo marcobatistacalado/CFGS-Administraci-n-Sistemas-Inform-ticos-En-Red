@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="polideportivos.dtd"?>
+<polideportivos>
+    <polideportivo>
+        <nombre>Pedro</nombre>
+        <direccion>calle dolores</direccion>
+        <precio>5€</precio>
+        <pista>
+            <numero>101</numero>
+            <padel/>
+            <cubierta/>
+            <reserva>
+                <fecha>15-04-2022</fecha>
+                <hora>15</hora>
+                <horaf>19</horaf>
+                <luz>si</luz>
+                <persona>
+                    <nombre>Paco</nombre>
+                    <socio>1020</socio>
+                </persona>
+            </reserva>
+        </pista>
+    </polideportivo>
+    <polideportivo>
+        <nombre>Pedro</nombre>
+        <direccion></direccion>
+        <precio/>
+        <pista>
+            <numero></numero>
+            <tenis/>
+            <cubierta></cubierta>
+            <reserva/>
+        </pista>
+    </polideportivo>
+    <polideportivo>
+        <nombre>Pedro</nombre>
+        <direccion></direccion>
+        <precio/>
+        <pista>
+            <numero></numero>
+            <tenis/>
+            <cubierta/>
+            <reserva>
+                <fecha>15-04-2022</fecha>
+                <hora>15</hora>
+                <horaf>19</horaf>
+                <luz>si</luz>
+                <persona>
+                    <nombre>Paco</nombre>
+                    <socio/>
+                </persona>
+            </reserva>
+        </pista>
+    </polideportivo>
+</polideportivos>

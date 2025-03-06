@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<helado xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="helado.xsd">
+    <sabor>chocolate</sabor>
+    <tipo>cono</tipo>
+    <tamaño>grande</tamaño>
+    <precio>3</precio>
+    <bajo_calorias>si</bajo_calorias>
+
+</helado>

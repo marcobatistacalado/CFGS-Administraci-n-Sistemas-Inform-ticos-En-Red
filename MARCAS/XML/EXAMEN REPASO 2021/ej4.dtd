@@ -1,0 +1,18 @@
+<!ELEMENT libreria (envio+)>
+<!ELEMENT envio (nombre,receptor,ciudad,codigo,pais,item+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT receptor (apartado-correos?,domicilio?)>
+<!ELEMENT apartado-correos (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT item (titulo,unidades,precio,observaciones)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT unidades (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda NMTOKEN #REQUIRED>
+<!ELEMENT observaciones (#PCDATA)>
+<!ELEMENT domicilio (nombre-receptor,calle,numero)>
+<!ELEMENT nombre-receptor (#PCDATA)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>

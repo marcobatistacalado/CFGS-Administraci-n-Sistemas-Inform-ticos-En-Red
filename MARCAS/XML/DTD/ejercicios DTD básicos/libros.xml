@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="libros.dtd"?>
+<libros>
+    <libro>
+        <titulo>Lo mejor de Madrid</titulo>
+        <autor>Pedro</autor>
+        <isbn>9048</isbn>
+        <precio>5€</precio>
+    </libro>
+    <libro>
+        <titulo>Madre mía</titulo>
+        <autor>Enrique</autor>
+        <autor>Pedro</autor>
+        <isbn>8905</isbn>
+        <precio>7€</precio>
+    </libro>
+    <libro>
+        <titulo>Quiero estar junto a ti</titulo>
+        <autor>Sergio</autor>
+        <isbn/>
+        <precio>9€</precio>
+    </libro>
+    <libro>
+        <titulo>Shrek</titulo>
+        <autor>Ruben</autor>
+        <isbn>4682</isbn>
+        <precio>5€</precio>
+        <precio>8€</precio>
+    </libro>
+</libros>

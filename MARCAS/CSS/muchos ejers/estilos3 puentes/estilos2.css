@@ -1,0 +1,36 @@
+*{
+    background-color:#cccccc;
+    margin: 60px 60px 60px 60px;
+    font-family: verdana;
+}
+#h1{
+    font-weight: bolder;
+    color: #666666;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: double;
+    border-color: #666666;
+    border-width: 10px;
+}
+p{
+    font-size: 20px;
+    color: #333333;
+    text-align: justify;
+    text-indent: 60px;
+}
+.resaltar{
+    background-color: #333333;
+    color: #cccccc;
+}
+.rodear{
+    border-style:solid;
+    border-width: 2px;
+    border-color: #666666;
+    font-weight: bolder;
+    font-style: oblique;
+    color: #666666;
+}
+#centrar{
+    text-align: center;
+}

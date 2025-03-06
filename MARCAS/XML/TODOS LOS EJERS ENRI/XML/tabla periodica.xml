@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabla xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="tabla%20periodica.xsd">
+    <elemento>
+        <estado>sólido</estado>
+        <nombre>metano</nombre>
+        <simbolo>Met</simbolo>
+        <numero>74</numero>
+        <peso_atomico>25</peso_atomico>
+        <punto_ebullicion>235</punto_ebullicion>
+        <densidad>5.62</densidad>
+    </elemento>
+</tabla>

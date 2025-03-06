@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="colegio.dtd"?>
+<colegio>
+    <nom_director>Pedro</nom_director>
+    <curso>
+        <nivel>1</nivel>
+        <nom_tutor>Paco</nom_tutor>
+        <nom_delegado>David</nom_delegado>
+        <alumno>
+            <nombre>Marco</nombre>
+            <edad>18</edad>
+        </alumno>
+    </curso>
+</colegio>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Aeropuerto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio1schema.xsd">
+<Vuelo>
+  <Codigo>AB123</Codigo>
+  <Origen>Madrid</Origen>
+  <Destino>Barcelona</Destino>
+  <FechaSalida>2022-07-13</FechaSalida>
+  <HoraSalida>13:00:00</HoraSalida>
+  <Pasajero>
+    <Numero tipo="pasillo">12</Numero>
+    <Equipaje>
+      <Bulto>
+        <Numero>1</Numero>  
+        <Peso>1.82</Peso>
+      </Bulto>
+    </Equipaje>
+  </Pasajero>
+  <Pasajero>
+    <Numero tipo="ventanilla">42</Numero>
+  </Pasajero>
+</Vuelo>
+<Vuelo>
+  <Codigo>BT456</Codigo>
+  <Origen>Barcelona</Origen>
+  <Destino>Tenerife</Destino>
+  <FechaSalida>2022-06-01</FechaSalida>
+  <HoraSalida>14:00:00</HoraSalida>
+  <Pasajero>
+    <Numero tipo="pasillo">1</Numero>
+  </Pasajero>
+  <precio>50</precio>
+</Vuelo>
+<Vuelo>
+  <Codigo>MV023</Codigo>
+  <Origen>Madrid</Origen>
+  <Destino>Valencia</Destino>
+  <FechaSalida>2022-06-12</FechaSalida>
+  <HoraSalida>13:00:00</HoraSalida>
+  <Pasajero>
+    <Numero tipo="pasillo">23</Numero>
+      <Equipaje>
+      <Bulto>
+        <Numero>1</Numero>  
+        <Peso>1.82</Peso>
+      </Bulto>
+    </Equipaje>
+  </Pasajero>
+  <Pasajero>
+    <Numero tipo="ventanilla">54</Numero>
+  </Pasajero>
+  <precio>90</precio>
+</Vuelo>
+</Aeropuerto>

@@ -1,0 +1,207 @@
+*{
+	margin:0; 
+ 	padding:0;
+ 	box-sizing: border-box;} 
+@font-face {
+	 font-family: mia; 
+	 src: url('./leaves_and_ground.ttf');
+    }
+body{
+    font-family: verdana;
+
+}
+#header{
+    font-size: 40px;
+    text-align: center;
+    font-family: mia;
+    text-shadow: 2px 2px 2px #666666;
+    letter-spacing: 20px;
+    animation-name: titulo1;
+    animation-duration: 4s;
+    max-width: 100%;
+
+}
+@keyframes titulo1{
+
+    from{
+    color: white;
+    letter-spacing: 2px;
+    }
+
+    to{
+    color: black;
+    letter-spacing: 20px;
+    }
+}
+#foto{
+    background-image: url(./extendido.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px;
+    overflow: auto;
+    position: relative;
+    
+}
+#foto ul{
+    width: 50%;
+    height: 60px;
+    margin-top: 90px;
+}
+#foto ul li{
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    height: 50px;
+    width: 33.3%;
+
+}
+#foto ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top:5px;
+    letter-spacing: 12px;
+    font-size: 40px;
+    font-family: mia;
+    background-color: rgba(66,65,60) ;
+    opacity: 0.7;
+    text-shadow: 2px 2px 2px black;
+
+}
+#foto ul li a:hover{
+    animation-name: lista;
+    animation-duration: 2s;
+
+}
+@keyframes lista{
+
+    from{
+    letter-spacing: 12px;
+    text-decoration: none;
+    }
+
+    to{
+    letter-spacing: 1px;
+    text-decoration: underline;
+    }
+}
+#foto img{
+    position: absolute;
+    left:83%;
+    top:5%;
+    
+}
+#contenedor{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+#contenedor1{
+    width: 70%;
+    text-indent: 40px;
+    border-right-style: solid;
+    border-right-color: black;
+    overflow: auto;
+    float: left;
+    height: 100%;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+#centrar{
+    text-align: center;
+    margin-top: 5px;
+}
+#contenedor1 a{
+    text-align: center;
+    font-style: italic;
+    color: black;
+}
+#contenedor1 a:hover{
+    font-weight: bold;
+}
+#contenedor1 img{
+    width: 48%;
+    float: left;
+    margin-left: 3px;
+}
+#contenedor2{
+    width: 30%;
+    float: left;
+    padding:20px;
+    height: 100%;
+}
+#contenedor2 fieldset{
+    width: 90%;
+    text-align: center;
+    margin:auto;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 20px;
+}
+#contenedor2 fieldset legend{
+    font-family: mia;
+    text-align: left;
+    font-size: 30px;
+    margin-left: 20px;
+}
+#pie{
+    height: 40px;
+    background-color: rgba(66,65,60) ;
+    opacity: 0.7;
+}
+
+#imgpie{
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+#imgpie img{
+    margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 700px) {
+	#header,#imagen ul,#foto ul li,#imagen img,form,#contenedor {width:100%; text-align: center;}
+    #foto{
+        height: 180px;
+    }
+    #foto ul{
+        width: 100%;
+        margin-top: 0;
+    }
+    #foto ul li{
+        float: none;
+    }
+	#foto img{
+		display:none;
+	}
+    #contenedor{
+        margin-bottom: 0;
+    }
+    #contenedor1{
+        float: none;
+        border-style: none;
+        width: 100%;
+    }
+    #contenedor2{
+        float: none;
+        width: 100%;
+        margin-top: 0;
+    }
+    #header{
+        animation:none;
+    }
+    #contenedor2 fieldset{
+        width: 100%;
+    }
+
+}

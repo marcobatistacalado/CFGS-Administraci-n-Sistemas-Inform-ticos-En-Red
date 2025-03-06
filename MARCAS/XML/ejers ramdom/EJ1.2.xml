@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro-recetas>
+    <receta>
+        <titulo></titulo>
+        <ingrediente></ingrediente>
+        <preparacion></preparacion>
+        <truco></truco>
+    </receta>
+
+
+
+</libro-recetas>

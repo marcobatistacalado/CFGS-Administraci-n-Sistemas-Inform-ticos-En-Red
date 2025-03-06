@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE colegio SYSTEM "ej2.dtd">-->
+<colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="ej2.xsd">
+    <nomdir>Antonio Calado</nomdir>
+    <cursos>
+        <nivel>1</nivel>
+        <nomtut>Juan Pérez</nomtut>
+        <nomdel>Iñigo Momoa</nomdel>
+        <nomalu>Jorge Nitales</nomalu>
+        <edad>5</edad>
+    </cursos>
+</colegio>

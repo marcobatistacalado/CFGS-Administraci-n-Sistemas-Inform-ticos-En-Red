@@ -1,0 +1,11 @@
+<!ELEMENT libros (libro1,libro2,libro3,libro4,libro5)>
+<!ELEMENT libro1 (titulo,autor,isbn,precio)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT libro2 (titulo,autor+,isbn,precio)>
+<!ELEMENT autor2 (#PCDATA)>
+<!ELEMENT libro3 (titulo,autor?,precio)>
+<!ELEMENT libro4 (titulo,autor,isbn,precio+)>
+<!ELEMENT libro5 (titulo,autor,isbn)>

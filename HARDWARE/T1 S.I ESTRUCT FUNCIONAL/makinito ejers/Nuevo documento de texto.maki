@@ -1,0 +1,17 @@
+;Programa que calcula el factorial de NUM y lo guarda en FACT
+; Segmento de datos
+BEGIN-DATA
+NUM=10 ; número a calcular el factorial
+FACT=? ; donde se guarda el resultado
+END-DATA
+; Segmento de código
+BEGIN-CODE
+MOV 1,[FACT]
+BUCLE: MUL [FACT],[NUM]
+MOV AC,[FACT]
+SUB [NUM],1
+MOV AC,[NUM]
+CMP [NUM],1
+JGT BUCLE
+TERM ; se detiene la máquina
+END-CODE

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE polideportivos SYSTEM "polideportivos.dtd">
+<polideportivos>
+    <ciudad>Madrid</ciudad>
+    <polideportivo>
+        <nombre>Vicente del Bosque</nombre>
+        <direccion>Monforte de Lemos</direccion>
+        <precio-hora>9</precio-hora>
+        <pista>
+            <numero>1</numero>
+            <padel/>
+            <cubierta>si</cubierta>
+        </pista>
+        <pista>
+            <numero>2</numero>
+            <tenis/>
+            <cubierta>no</cubierta>
+            <reserva>
+                <fecha>12-4-2022</fecha>
+                <hora-ini>10:00</hora-ini>
+                <hora-fin>11:00</hora-fin>
+                <luz/>
+                <nombre>Juan Sanz</nombre>
+                <numerosocio>23</numerosocio>
+            </reserva>
+            <reserva>
+                <fecha>13-4-2022</fecha>
+                <hora-ini>11:00</hora-ini>
+                <hora-fin>12:30</hora-fin>
+                <nombre>Juan Sanz</nombre>
+            </reserva>
+        </pista>
+    </polideportivo>
+    <polideportivo>
+        <nombre>Vicente del Bosque</nombre>
+        <direccion>Monforte de Lemos</direccion>
+       
+    </polideportivo>
+</polideportivos>
+    

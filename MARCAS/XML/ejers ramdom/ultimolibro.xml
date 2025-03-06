@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro-direcciones SYSTEM "ultimolibro.dtd">
+<libro-direcciones>
+    <entrada id="a1">
+        <nombre>Ana</nombre>
+        <direccion>
+            <calle tipo="calle">San Benito 6</calle>     
+            <codigo-postal>&cod;</codigo-postal> <!--entity del dtd-->
+            <localidad>Madrid</localidad>
+            <pais>España</pais>
+        </direccion>
+        <direccion>
+            <calle>Castellana 20</calle>     
+            <codigo-postal>28039</codigo-postal>
+            <localidad>Madrid</localidad>
+            <pais>España</pais>
+        </direccion>
+        <tel principal="si">2343434</tel>
+        <email href="analon@sdef.com"/>
+        <comentarios>piscina</comentarios>
+    </entrada>
+    <entrada id="b3">
+        <nombre>Juan</nombre>
+        <direccion>
+            <calle tipo="avenida">Mediterraneo</calle>
+            <codigo-postal>28045</codigo-postal>
+            <localidad>Alcobendas</localidad>
+            <pais>España</pais>
+        </direccion>
+        <tel principal="no"></tel>
+        <email href="mbatista@gmail.com" />
+        <comentarios>la mejor</comentarios>
+    </entrada>
+    <entrada id="l24">
+        <nombre>Laura</nombre>
+        <tel>2456664652</tel>
+        <email href="dfsdfsdfdfs@gmail.com" />
+        <email href="csdcvsds@gmail.com" />
+    </entrada>
+</libro-direcciones>

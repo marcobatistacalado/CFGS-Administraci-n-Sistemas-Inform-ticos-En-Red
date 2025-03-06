@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<helado>
+    <sabor>fresa</sabor>
+    <tipo>cono</tipo>
+    <tamaño>mediano</tamaño>
+    <precio>3.5</precio>
+    <bajo_en_calorias>true</bajo_en_calorias>
+</helado>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<nota xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nota.xsd">
+    <codigo>b</codigo>
+    <para>Pedro</para>
+    <de>Jose</de>
+    <cabecera>Recordatorio</cabecera>
+    <mensaje>No te olvides de echar la primitiva</mensaje>
+    <edad>25</edad>
+    <fecha-nacimiento>2003-02-04</fecha-nacimiento>
+    <fecha-recepcion>2022-04-30</fecha-recepcion>
+    <hora-recepcion>12:13:00</hora-recepcion>
+    <indicador>true</indicador>
+    <numero-mensaje>4</numero-mensaje>
+</nota>

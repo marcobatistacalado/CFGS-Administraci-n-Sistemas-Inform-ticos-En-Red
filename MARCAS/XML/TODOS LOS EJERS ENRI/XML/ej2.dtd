@@ -1,0 +1,8 @@
+<!ELEMENT colegio (nomdir,cursos)>
+<!ELEMENT nomdir (#PCDATA)>
+<!ELEMENT cursos (nivel,nomtut,nomdel,nomalu?,edad?)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT nomtut (#PCDATA)>
+<!ELEMENT nomdel (#PCDATA)>
+<!ELEMENT nomalu (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>

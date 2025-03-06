@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="jardineria.dtd"?>
+<pedido>
+    <articulo>
+        <nombre>Cortadora cesped</nombre>
+        <tipo valor="electrico"/> <!-- Aunque no se sabe si es o no eléctrica-->
+        <precio>148.95€</precio>
+        <codprod>872-AA</codprod>
+    </articulo>
+    <articulo>
+        <nombre>Podadora</nombre>
+        <precio>7.98€</precio>
+        <codprod>926-FH</codprod>
+    </articulo>
+    <cliente>
+        <comprador>
+            <nombre>ROberto</nombre>
+            <apellido>Movilla</apellido>
+            <direccion>Plaza de la Duquesa, 12</direccion>
+            <ciudad>Albacete</ciudad>
+            <codpostal>05020</codpostal>
+        </comprador>    
+        <recogida>
+            <nombre>Alicia Abad</nombre>
+        </recogida>
+        <pago>
+            <direccion>General Ricardos, 56</direccion>
+            <ciudad>Madrid</ciudad>
+            <codpostal>28055</codpostal>
+        </pago>
+    </cliente>
+</pedido>

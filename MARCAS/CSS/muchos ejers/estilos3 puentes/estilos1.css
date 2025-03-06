@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    background-color: #cccccc;
+    font-family: verdana;
+    font-size: 40px;
+}
+#izquierda{
+    width: 30%;
+    height: 100vh;
+    background-image: url(./imagen/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    text-align: center;
+    padding-top: 40vh;
+}
+#derecha{
+    width: 60%;
+    height: 60vh;
+    float: right;
+    color: #cc3300;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+
+a{
+    background-color:#cc3300;
+    text-decoration: none;
+    color: #cccccc;
+}
+
+a:hover{
+    background-color: #cccccc;
+    color: #cc3300;
+    border-color: #cc3300;
+    border-style: outset;
+}
+ul{
+    list-style-image: url(./imagen/icono.png);
+    position: inside;
+}

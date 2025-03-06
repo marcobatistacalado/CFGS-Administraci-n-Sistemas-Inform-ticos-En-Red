@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="libro-recetas.dtd"?>
+<libro-recetas>
+    <receta>
+        <titulo></titulo>
+        <ingrediente></ingrediente>
+        <ingrediente cantidad="más"></ingrediente>
+        <preparacion tipo="fácil"/>
+        <truco>jiji</truco>
+    </receta>
+    <receta>
+        <titulo></titulo>
+        <ingrediente></ingrediente>
+        <ingrediente/>
+        <preparacion tipo="difícil"/>
+        <truco/>
+    </receta>
+    <receta>
+        <titulo></titulo>
+        <ingrediente></ingrediente>
+        <ingrediente/>
+        <preparacion tipo="difícil"/>
+        <truco/>
+    </receta>
+</libro-recetas>

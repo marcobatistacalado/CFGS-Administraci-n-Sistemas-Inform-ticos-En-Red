@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="estantería">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string" />
+                            <xs:element name="autor" minOccurs="1" maxOccurs="unbounded" type="xs:string" />
+                            <xs:element name="isbn" minOccurs="0" type="xs:string" />
+                            <xs:element name="precio" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

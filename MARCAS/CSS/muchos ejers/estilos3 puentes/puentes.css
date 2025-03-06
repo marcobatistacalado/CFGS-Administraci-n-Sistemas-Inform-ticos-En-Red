@@ -1,0 +1,38 @@
+#body{
+    color: #cccccc;
+    font-family: verdana;
+    font-size: 40px;
+}
+*{
+    box-sizing: border-box;
+}
+#izquierda{
+    width: 30%;
+    height: 100vh;
+    background-image: url(./imagen/fondo.jpg);
+    float: left;
+}
+#derecha{
+    width: 60%;
+    height: 60%;
+    float: left;
+    color: #cc3300;
+    text-align: center;
+}
+#enlace{
+    background-color:#cc3300;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #cccccc;
+
+}
+#enlace:link{
+    background-color: #cccccc;
+    color: #cc3300;
+    border-color: #cc3300;
+    border-style: outset;
+}
+ul{
+    list-style-image: url(./imagen/icono.png);
+    position: inside;
+}

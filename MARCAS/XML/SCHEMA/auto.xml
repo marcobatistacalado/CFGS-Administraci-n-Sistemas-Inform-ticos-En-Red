@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="auto.xsd">
+    <marca>citroen</marca>
+    <modelo>xara</modelo>
+    <kms>120000</kms>
+    <consumo100>5.4</consumo100>
+    <fecha_compra>2010-03-29</fecha_compra>
+    <aire_acondicionado>true</aire_acondicionado>
+    <matricula>1233FDS</matricula>
+</auto>
+    

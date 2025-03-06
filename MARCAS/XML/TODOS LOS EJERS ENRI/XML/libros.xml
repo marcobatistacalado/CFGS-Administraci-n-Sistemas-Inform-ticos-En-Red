@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE estantería SYSTEM "libros.dtd">-->
+<estantería xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="libros.xsd">
+    <libro>
+        <titulo>2 horas de esclavitud</titulo>
+        <autor>Abonga Agyakwa</autor>
+        <isbn>1234-23-45-67</isbn>
+        <precio>10€</precio>
+    </libro>
+
+    <libro>
+        <titulo>Multidenso</titulo>
+        <autor>Esther Romero</autor>
+        <autor>Juan Moreno</autor>
+        <isbn>1235-24-45-68</isbn>
+        <precio>12€</precio>
+    </libro>
+
+    <libro>
+        <titulo>Oscuro deseo</titulo>
+        <autor>Rodrigo Espeso</autor>
+        <precio>8€</precio>
+    </libro>
+
+    <libro>
+        <titulo>Danger Zone</titulo>
+        <autor>Fernando Ramirez</autor>
+        <isbn>256-34-678-56</isbn>
+        <precio>15€</precio>
+        <precio>20€</precio>
+    </libro>
+
+    <libro>
+        <titulo>Sin tiempo,saltar</titulo>
+        <autor>Abel Delgado</autor>
+        <isbn>72-125-23-567</isbn>
+    </libro>
+</estantería>

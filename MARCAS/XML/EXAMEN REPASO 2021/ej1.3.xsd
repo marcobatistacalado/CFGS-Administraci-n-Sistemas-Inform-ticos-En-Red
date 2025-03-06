@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="tipomonitor">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[a-zA-Z][a-zA-Z0-9]{3}[a-zA-Z]"></xs:pattern>
+  </xs:restriction>
+</xs:simpleType>
+
+  <xs:element name="empresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string" />
+        <xs:element name="web" type="xs:string" />
+        <xs:element name="monitor" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="telefono" type="xs:integer" />
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="tipomonitor" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="campamento" maxOccurs="10" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="destino" type="xs:string" />
+              <xs:element name="fh_inicio">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="hora" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="precio" type="xs:integer" />
+              <xs:element name="plazas" type="xs:integer" />
+              <xs:element name="id_monitor" type="xs:string" />
+              <xs:element name="inscritos" type="xs:string" />
+              <xs:element name="niño" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string" />
+                    <xs:element name="apellido" type="xs:string" />
+                    <xs:element name="actividad" maxOccurs="3" minOccurs="1">
+                      <xs:simpleType >
+                        <xs:restriction base="xs:string" >
+                          <xs:enumeration value="Canoa" />
+                          <xs:enumeration value="Escalada"/>
+                          <xs:enumeration value="Rafting"/>
+                          <xs:enumeration value="Tiro"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

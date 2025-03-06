@@ -1,0 +1,16 @@
+<!ELEMENT trenes (ave)+>
+<!ELEMENT ave (codigo,origen,destino,fecha,hora,vagon+)>
+<!ELEMENT vagon (numero,cafeteria?,plaza*)>
+<!ELEMENT plaza (num,nombre,menor?)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destino (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cafeteria EMPTY>
+<!ELEMENT menor EMPTY>
+<!ATTLIST ave modelo CDATA #IMPLIED>
+<!ATTLIST plaza tipo (pasillo|ventanilla) #REQUIRED>

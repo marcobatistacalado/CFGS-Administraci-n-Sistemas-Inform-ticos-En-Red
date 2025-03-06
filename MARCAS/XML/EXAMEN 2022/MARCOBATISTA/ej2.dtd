@@ -1,0 +1,15 @@
+<!ELEMENT peliculas (pelicula+)>
+<!ELEMENT pelicula (nombre,(accion|comedia|drama),director,nacionalidad?,actor+,oscar*)>
+<!ATTLIST pelicula codigo ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT accion EMPTY>
+<!ELEMENT comedia EMPTY>
+<!ELEMENT drama EMPTY>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT actor (nombre,apellido)>
+<!ATTLIST actor fecha_nacimiento CDATA #IMPLIED>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT oscar (tipo,año)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT año (#PCDATA)>

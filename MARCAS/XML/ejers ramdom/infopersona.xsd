@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="tipoSexo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="hombre|mujer"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoDni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{6,8}[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="personas">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- aqui iria un xs:all pero claro no podemos porque solo es para cuando los elementos sean 0 o 1 vez UNBOUNDED-->
+                <xs:element name="persona" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dni" type="tipoDni" />
+                            <xs:element name="fhnac" type="xs:date" />
+                            <xs:element name="tel">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:positiveInteger">
+                                            <xs:attribute name="tipo" use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="edad" type="xs:positiveInteger" />
+                            <xs:element name="incidencia" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cod" type="xs:string" />
+                                        <xs:element name="descripcion" type="xs:string" />
+                                        <xs:element name="resulto">
+                                            <xs:complexType>
+                                                <xs:attribute name="valor" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="sexo" use="required" type="tipoSexo" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

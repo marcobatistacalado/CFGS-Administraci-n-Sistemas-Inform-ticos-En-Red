@@ -1,0 +1,13 @@
+<!ELEMENT polideportivo (curso_natacion*)>
+<!ELEMENT curso_natacion (hora_inicio,duracion,dias+,profesor,alumno*)>
+<!ATTLIST curso_natacion identificador ID #REQUIRED>
+<!ATTLIST curso_natacion nivel (inicial|medio|avanzado) #REQUIRED>
+<!ELEMENT hora_inicio (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT dias EMPTY>
+<!ATTLIST dias valor (lunes|martes|miercoles|jueves|viernes|sabado|domingo) #REQUIRED>
+<!ELEMENT profesor (#PCDATA)>
+<!ELEMENT alumno (nombre,edad)>
+<!ATTLIST alumno discapacidad NMTOKEN #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>

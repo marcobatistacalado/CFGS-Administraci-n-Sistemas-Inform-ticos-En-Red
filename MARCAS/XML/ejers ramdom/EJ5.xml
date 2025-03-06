@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedido SYSTEM "EJ5.dtd">
+<pedido>
+    <articulo>
+        <nombre>Cortadora de cesped</nombre>
+        <tipo valor="electrico"/>
+        <precio>148.95</precio>
+        <codprod>872-AA</codprod>
+    </articulo>
+    <articulo>
+        <nombre>Podadora</nombre>
+        <precio>7.98</precio>
+        <codprod>926-FH</codprod>
+    </articulo>
+    <fecha>20 de octubre del 99</fecha>
+    <cliente>
+        <comprador>
+            <nombre>Roberto Movilla</nombre>
+            <ciudad>Albacete</ciudad>
+            <direccion>Plaza de la Duquesa 12</direccion>
+            <codpostal>05020</codpostal>
+        </comprador>
+        <recoger>Alicia Abad</recoger>
+        <pago>
+            <calle>General Ricardos 56, Madrid</calle>
+            <codpostal>28055</codpostal>
+        </pago>
+    </cliente>
+</pedido>

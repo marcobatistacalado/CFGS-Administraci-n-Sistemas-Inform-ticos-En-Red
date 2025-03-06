@@ -1,0 +1,12 @@
+<!ELEMENT polideportivo (curso+)>
+<!ELEMENT curso (horai,duracion,(lunes,martes,miercoles,jueves,viernes,sabado,domingo)+,profesor,alumno*)>
+<!ATTLIST curso id ID #REQUIRED>
+<!ATTLIST curso nivel (inicial|medio|avanzado) #REQUIRED>
+<!ELEMENT horai (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT porfesor EMPTY>
+<!ELEMENT alumno (nombre,edad,discapacidad)>
+<!ELEMENT nombre EMPTY>
+<!ELEMENT edad EMPTY>
+<!ELEMENT discapacidad #IMPLIED>

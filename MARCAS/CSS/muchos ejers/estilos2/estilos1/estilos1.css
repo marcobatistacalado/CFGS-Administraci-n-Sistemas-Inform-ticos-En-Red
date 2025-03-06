@@ -1,0 +1,81 @@
+*{
+    margin:auto;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+body{
+    font-size: 1.5em;
+}
+#one{
+    background-color: #ff9933;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 90%;
+    height: 80px;
+    font-size: 50px;
+    color: white;
+    margin-top: 0.5%;
+}
+#two{
+    width: 80%;
+    height: 400px;
+    background-size: cover;
+    background-image: url(./imagenes/Offer_Pricing_Mngmt.png);
+    background-repeat: no-repeat;
+    border:solid;
+    border-color:#ff9933;
+    padding-left: 45%;
+    font-size: 15px;
+}
+#three
+{
+    width: 30%;
+    border-style: dotted;
+    padding-bottom:10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5%;
+}
+#three::first-letter{
+    font-size: 2em;
+}
+
+#img1{
+    float: right; 
+    width: 200px;
+    padding-bottom: 40px;
+    vertical-align: 0%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+#four{
+    background-image: url(./imagenes/conectado.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #434343;
+    border-style: solid;
+    border-color: #ff9933;
+    text-align: center;
+}
+
+.sombra{
+    box-shadow: 1px 1px 6px 1px #434343;
+}
+.orange{
+    color: #ff9933;
+    font-size: 1.2em;
+}
+
+#stay{
+    text-align: center;
+}
+#linkcolor{
+    color: #ff9933;
+}
+#linkcolor:hover{
+    color: #434343;
+}

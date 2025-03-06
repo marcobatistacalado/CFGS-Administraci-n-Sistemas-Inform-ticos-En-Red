@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabla_periodica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="tabla_periodica.xsd">
+    <estado>solido</estado>
+    <nombre>litio</nombre>
+    <simbolo>Abc</simbolo>
+    <numero_atomico>55</numero_atomico>
+    <peso_atomico>55.5</peso_atomico>
+    <punto_ebullición>90.5</punto_ebullición>
+    <densidad>53.2</densidad>
+</tabla_periodica>

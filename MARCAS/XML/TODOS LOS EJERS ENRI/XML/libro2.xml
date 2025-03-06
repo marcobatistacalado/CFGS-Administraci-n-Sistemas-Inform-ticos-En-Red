@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro-direcciones SYSTEM "libro2.dtd">
+<libro-direcciones>
+    <entrada id="a1">
+        <nombre>Ana</nombre>
+        <direccion>
+            <calle tipo="calle">San Benito,6</calle>
+            <codigo-postal>&cod;</codigo-postal>
+            <localidad>MAdrid</localidad>
+            <pais>ESpaña</pais>
+        </direccion>
+        <direccion>
+            <calle>Castellana,16</calle>
+            <codigo-postal>29179</codigo-postal>
+            <localidad>MAdrid</localidad>
+            <pais>ESpaña</pais>
+        </direccion>
+        <tel principal="si">123456789</tel>
+        <email href="a123456@gmail.com"/>
+        <comentarios>piscina</comentarios>
+    </entrada>
+
+    <entrada id="b3">
+        <nombre>Pepe</nombre>
+        <direccion>
+            <calle tipo="avenida">CantoBlanco</calle>
+            <codigo-postal></codigo-postal>
+            <localidad>Alcobendas</localidad>
+            <pais>España</pais>
+        </direccion>
+        <tel principal="no">987654321</tel>
+        <tel>34343434343</tel>
+        <email href="b123456@gmail.com" />
+        <email href="1231233224@gmail.com" />
+    </entrada>
+
+    <entrada id="l24">
+        <nombre>LAura</nombre>
+    </entrada>
+</libro-direcciones>

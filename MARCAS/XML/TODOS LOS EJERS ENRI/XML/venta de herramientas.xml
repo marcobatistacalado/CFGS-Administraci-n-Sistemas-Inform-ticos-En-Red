@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE venta SYSTEM "venta%20de%20herramientas.dtd">
+<venta>
+    <pedido urgente="si">
+        <fecha>20/10/1999</fecha>
+        <codpostalinicio>28055</codpostalinicio>
+        <herramineta>
+            <cortadora oferta="si" modelo="electrico" cantidad="1">
+                <precio>148.95€</precio>
+                <cod>872-AA</cod>
+            </cortadora>
+
+            <podadora cantidad="3">
+                <precio>7.98€</precio>
+                <cod>926-FH</cod>
+            </podadora>
+        </herramineta>
+
+
+        <cliente>
+            <nomcliente>Roberto Movilla</nomcliente>
+            <ciudad>Albacete</ciudad>
+            <codpostaldirdest>05020</codpostaldirdest>
+            <dirfacturacion>General Ricardos,56</dirfacturacion>
+            <dirdestino>Plaza de la Duquesa,12</dirdestino>
+            <nomrecogida>Alicia Abad</nomrecogida>
+        </cliente>
+    </pedido>
+</venta>

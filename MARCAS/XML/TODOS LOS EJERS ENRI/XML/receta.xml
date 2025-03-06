@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro-recetas SYSTEM "receta.dtd">
+<libro-recetas>
+    <receta>
+        <titulo>Arroz caldoso</titulo>
+        <ingrediente cantidad="1">arroz</ingrediente>
+        <preparacion tipo="fácil">Mojar arroz</preparacion>
+        <truco>Fuego lento</truco>
+    </receta>
+
+    <receta>
+        <titulo>Papaya frita</titulo>
+        <ingrediente>Aceite</ingrediente>
+        <ingrediente cantidad="2">Papaya</ingrediente>
+        <preparacion tipo="difícil">Freir papaya</preparacion>
+    </receta>
+</libro-recetas>

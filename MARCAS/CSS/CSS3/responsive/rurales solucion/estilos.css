@@ -1,0 +1,167 @@
+*{
+	margin:0; /* Para quitar los márgenes y paddings que mantiene el navegador */
+ 	padding:0;
+ 	box-sizing: border-box;} /* Para que el ancho y el alto de un elemento no se vea aumentado con el padding y el borde */
+
+@font-face {
+	 font-family: mia;  /* Creo un tipo de letra llamado mia, lo puedo aplicar en la parte que quiera del documento */
+	 src: url('handsean.ttf');}
+
+body{ 
+	background-color:#A9F5BC;
+    color:green;
+	font-family: mia;} /* Aplicamos el tipo de letra que he creado arriba */
+	
+#container {
+        background-color:white;
+        margin-top:50px;
+		max-width:900px;
+		margin-left:auto; /* Este estilo y el siguiente son para centrar el div horizontalmente */
+		margin-right:auto;
+		border-top-left-radius:100px;
+		padding:20px;
+		overflow: auto;  /* Cuando todos los elemento que contiene un div están flotando, pongo este estilo para que el height sea auto y se adapte al contenido */
+		}
+
+#cabecera { 
+		height:75px;
+        width:65%;
+		text-align:center;
+		font-size:3em; /* El tamaño de la fuente se multiplica por 3*/
+		text-shadow:4px 4px 8px green;	
+	    float:left; /* Flota para compartir la línea con el siguiente elemento, en este caso el div menu */
+	 	}
+#menu{
+		width:35%; /* Junto con el width de cabecera suman el 100% */
+		float:left; /* Ponemos todos los elementos de bloque que están en la misma línea flotando */
+	}
+
+#menu a{    					/* Sólo afecta a los enlaces dentro del menu*/
+		display:block;	        /* Convertimos los enlaces a bloque para poder asignarles ancho y alto */
+		width:30%;           	/* Aunque hayamos muesto box-sizing:border-box, eso no influye en los márgenes*/
+								/* La suma de los anchos de los enlaces más sus márgenes laterales no pueden sumar más de 100% */
+        margin-right:1%;
+	    height:40px;
+		background-color:#A9F5BC;
+		text-align:center;
+		margin-top:30px;
+		border-top-left-radius:15px;
+		float:left;				/* Los enlaces flotan, para que se coloquen en la misma línea, recuerda que ahora son elementos de bloque */
+		
+		padding-top:10px;		/* Es la forma de centrar verticalmente, ya que vertical-align sólo funciona en las celdas */
+		color:white;
+		text-decoration:none;
+		}
+
+#menu a:hover{			/* Sólo afecta cuando me posiciono encima de los enlaces del menu */
+	color:green;
+	box-shadow:3px 3px 5px 2px green;
+	}
+
+#central {
+        clear:both; /* Rompe el float, fuerza a que este div no se coloque a la izda del menu */
+		background-color:white;
+		width:90%;
+		height:auto;
+		overflow:auto;/* Cuando todos los elemento que contiene un div están flotando, pongo este estilo para que el height sea auto y se adapte al contenido */
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:150px;
+		margin-bottom:50px;
+		text-align:justify;
+		text-indent:40px;
+		padding:40px; /* Separación entre el borde de la caja y el contenido */
+		border-style:outset; /* si no pongo el style no se muestra el borde */
+		border-color:#A9F5BC;
+		border-top-left-radius:100px;
+		}
+
+.centrar{
+	text-align:center;
+	}
+
+
+#central a{
+	color:	green;
+	text-decoration: none;
+	}
+
+#central a:hover{
+	font-style: oblique;
+	color:black;
+	}
+
+#central #imagenes{
+	margin-top:20px;} /* Separo 20px las imágenes del elemento superior */
+
+#imagenes img{
+	box-shadow:1px 1px 1px 0px grey;
+	width:30%; /* En total todas las imágenes ocuparán el 90% del div #imagenes */
+	}
+
+#lista{
+	float:left;
+	margin-top:55px;
+	width:50%; /* La suma de los anchos de la lista y el form y sus márgenes laterales no pueden superar el 100% */
+	border-right-style: solid;
+	}
+
+#lista ul {
+	list-style-image:url('59.png'); /* Iconos de la lista como imágenes*/
+	list-style-position: inside; /* Acercar los iconos al texto */
+}
+
+form{
+	float:left;
+	margin-top:20px;
+	text-align:center; 
+	margin-left:7%;	 	/* Separación por la izquierda */
+	width:40%;       	/* La suma del width de la lista y el form y sus márgenes laterales no puede superar el 100% */
+	color:rgb(136, 130, 130);
+	}
+
+
+#pie { 
+	font-style:oblique;
+	text-align:right;}
+
+/* Estas líneas son para hacer la página responsive , es decir que se adapte al ancho de la pantalla 
+Lo vemos en la segunda evaluación */
+
+@media only screen and (max-width: 500px) {
+	#cabecera,#navegar,form,#lista,#menu,#menu a,#imagenes img{width:100%}
+	#lista{
+		border:none;
+		text-align:center;
+	}
+	/*
+	img{
+		display:block;
+		width:100%
+	}*/
+	form{
+		margin-left:0;
+		text-align:center;
+	}
+	#cabecera{
+		height:auto;
+	}
+	#central{
+		margin-top:400px;
+	}
+	#central{
+		text-indent: 0;
+	}
+	#menu ul li{
+        width: 100%;
+        border-bottom-style: none;
+    }
+	#imagenes{
+		width: 100%;
+	}
+}
+
+
+
+
+

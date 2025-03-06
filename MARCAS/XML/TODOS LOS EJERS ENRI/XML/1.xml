@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colegio xmlns:alu="http://www.mialumno"
+xmlns:asig="http://www.miasig">
+    <clase>
+        <profesor>Pepito</profesor>
+        <alumnos edad="18">Ana</alumnos>
+        <alu:numero>1</alu:numero>
+    </clase>
+
+    <asignatura>
+        <nombre>Mates</nombre>
+        <asig:numero>1</asig:numero>
+    </asignatura>
+</colegio>

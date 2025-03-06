@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="song.dtd" type="application/xml-dtd"?>
+<song length="6:20" anio="1978">
+    <title>Hot Cup</title>
+    <composers>
+        <composer>
+            <nombre>Henry</nombre>
+            <apellidos>Beolo</apellidos>
+        </composer>
+    </composers>
+    <producers>
+        <producer>
+            <nombre>Jacques</nombre>
+            <apellidos>Morali</apellidos>
+        </producer>
+    </producers>
+    <publisher>Pol</publisher>
+    <artists>
+        <artist>Village People</artist>
+    </artists>
+</song>

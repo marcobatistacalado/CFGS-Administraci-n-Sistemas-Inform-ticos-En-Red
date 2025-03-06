@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="tipo%20examen.dtd"?>-->
+<alquiler xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="tipo%20examen.xsd">
+    <polideportivo>
+        <nombre>San Chad</nombre>
+        <direccion>C/Mamado,3</direccion>
+        <precio>12</precio>
+        <pista tipo="padel" cubierta="si">
+            <numero>12</numero>
+            <reserva luz="si">
+                <fecha>2022-02-04</fecha>
+                <hora_incio>21:00</hora_incio>
+                <hora_fin>23:00</hora_fin>
+                <socio>
+                    <nombre>Juan</nombre>
+                    <numero>23456</numero>
+                </socio>
+            </reserva>
+        </pista>
+    </polideportivo>
+
+    <polideportivo>
+        <nombre>San Pablo</nombre>
+        <direccion>C/Marino,6</direccion>
+        <precio />
+        <pista tipo="tenis" cubierta="no">
+            <numero>1</numero>
+            <reserva luz="no">
+                <fecha>2022-05-24</fecha>
+                <hora_incio>12:00</hora_incio>
+                <hora_fin>14:00</hora_fin>
+                <socio>
+                    <nombre>Pedro</nombre>
+                    <numero />
+                </socio>
+            </reserva>
+        </pista>
+
+        <pista tipo="padel" cubierta="no">
+            <numero>3</numero>
+        </pista>
+    </polideportivo>
+
+    <polideportivo>
+        <nombre>San Coconut</nombre>
+        <direccion>C/Paraiso,13</direccion>
+        <precio />
+    </polideportivo>
+</alquiler>

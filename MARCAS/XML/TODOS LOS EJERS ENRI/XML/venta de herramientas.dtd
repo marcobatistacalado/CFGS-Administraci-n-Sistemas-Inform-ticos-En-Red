@@ -1,0 +1,21 @@
+<!ELEMENT venta (pedido)>
+<!ELEMENT pedido (fecha,codpostalinicio?,herramineta+,cliente)>
+<!ATTLIST pedido urgente (si|no) #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT codpostalinicio (#PCDATA)>
+<!ELEMENT herramineta (cortadora,podadora)>
+<!ELEMENT cortadora (precio,cod)>
+<!ATTLIST cortadora oferta (si|no) #REQUIRED>
+<!ATTLIST cortadora modelo (electrico|gasolina) #IMPLIED>
+<!ATTLIST cortadora cantidad NMTOKEN #REQUIRED>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT cod (#PCDATA)>
+<!ELEMENT podadora (precio,cod)>
+<!ATTLIST podadora cantidad NMTOKEN #REQUIRED>
+<!ELEMENT cliente (nomcliente,ciudad,codpostaldirdest,dirfacturacion,dirdestino?,nomrecogida?)>
+<!ELEMENT nomcliente (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT codpostaldirdest (#PCDATA)>
+<!ELEMENT dirfacturacion (#PCDATA)>
+<!ELEMENT dirdestino (#PCDATA)>
+<!ELEMENT nomrecogida (#PCDATA)>

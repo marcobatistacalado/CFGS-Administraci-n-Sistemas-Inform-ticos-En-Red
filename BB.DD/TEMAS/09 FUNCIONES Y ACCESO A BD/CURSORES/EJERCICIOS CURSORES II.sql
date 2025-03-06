@@ -1,0 +1,77 @@
+/* 1. Procedimiento que muestra cada uno de los dueños de los animales, 
+saca su nombre y teléfono. Además, por cada uno de ellos muestra de sus animales 
+la especie, nombre y edad.*/
+CREATE OR REPLACE PROCEDURE DCURSOR2  
+AS
+CURSOR C1 IS
+SELECT * FROM DUEÑOS;
+
+VAUX VARCHAR2(10);
+
+CURSOR C2 IS
+SELECT ESPECIE,NOMBRE, TRUNC((SYSDATE -FECHA_NACIMIENTO)/365) EDAD 
+FROM ANIMALES 
+WHERE DNI_DUEÑO = VAUX;
+BEGIN
+
+FOR I IN C1 LOOP
+VER(I.NOMBRE || ' ' || I.TFNO_CONTACTO);
+VAUX := I.DNI;
+FOR J IN C2 LOOP
+VER(J.ESPECIE || ' '|| J.NOMBRE || ' ' || J.EDAD);
+END LOOP;
+END LOOP;
+END;
+
+/*2. Procedimiento que muestra los gatos que hay en ANIMALES 
+y por cada uno de ellos va mostrando los datos de sus visitas.*/
+CREATE OR REPLACE PROCEDURE D2CURSOR2  
+AS
+CURSOR C1 IS
+SELECT * FROM ANIMALES WHERE ESPECIE = 'GATO';
+
+VAUX VARCHAR2(10);
+
+CURSOR C2 IS
+SELECT * FROM VISITAS WHERE IDENT_ANIMAL = VAUX;
+BEGIN
+
+FOR I IN C1 LOOP
+VER(I.NOMBRE || ' ' || I.ESPECIE || ' ' ||I.RAZA);
+VAUX := I.IDENT_ANIMAL;
+FOR J IN C2 LOOP
+VER(J.IDENT_ANIMAL || ' '|| J.FH_VISITA || ' ' || J.MOTIVO);
+END LOOP;
+END LOOP;
+END;
+
+/*3. En el anterior mostrar al acabar cada animal cuantas visitas ha tenido 
+y al acabar los animales cuantos gatos hemos mostrado*/
+CREATE OR REPLACE PROCEDURE D2CURSOR2  
+AS
+CURSOR C1 IS
+SELECT * FROM ANIMALES WHERE ESPECIE = 'GATO';
+
+VAUX NUMBER;
+
+CURSOR C2 IS
+SELECT * FROM VISITAS WHERE IDENT_ANIMAL = VAUX;
+
+CONTVISITAS NUMBER;
+CONTGATOS NUMBER;
+BEGIN
+CONTGATOS :=0;
+FOR I IN C1 LOOP
+VER(I.NOMBRE || ' ' || I.ESPECIE || ' ' ||I.RAZA);
+VAUX := I.IDENT_ANIMAL;
+CONTGATOS := CONTGATOS +1;
+CONTVISITAS:=0;
+FOR J IN C2 LOOP
+VER(J.IDENT_ANIMAL || ' '|| J.FH_VISITA || ' ' || J.MOTIVO);
+CONTVISITAS := CONTVISITAS +1;
+END LOOP;
+VER('EN ESTE ANIMAL HA HABIDO ' || CONTVISITAS);
+
+END LOOP;
+VER('Y EN TOTAL HA HABIDO ESTOS GATOS ' || CONTGATOS);
+END;

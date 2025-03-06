@@ -1,0 +1,17 @@
+<!ELEMENT alquiler (polideportivo+)>
+<!ELEMENT polideportivo (nombre,direccion,precio?,pista*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio hora NMTOKEN #REQUIRED>
+<!ELEMENT pista (numero,reserva?)>
+<!ATTLIST pista tipo (padel|tenis) #REQUIRED>
+<!ATTLIST pista cubierta (si|no) #REQUIRED>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT reserva (fecha,persona)>
+<!ATTLIST reserva luz (si|no) #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
+<!ATTLIST fecha hora_inicio NMTOKEN #REQUIRED>
+<!ATTLIST fecha hora_fin NMTOKEN #REQUIRED>
+<!ELEMENT persona (nombre,numsocio?)>
+<!ELEMENT numsocio (#PCDATA)>

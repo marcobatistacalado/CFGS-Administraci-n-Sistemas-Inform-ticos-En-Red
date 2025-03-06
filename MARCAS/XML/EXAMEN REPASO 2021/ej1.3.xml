@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ej1.3.xsd"?>
+<empresa>
+    <nombre>TECNOCASA</nombre>
+    <web>www.chrome.com</web>
+    <monitor id="A12bc">
+        <nombre>Pedro</nombre>
+        <telefono>646722873</telefono>
+    </monitor>
+    <monitor id="a02">
+        <nombre>Juan</nombre>
+        <telefono>667399687</telefono>
+    </monitor>
+    <campamento>
+        <destino>Maldivas</destino>
+        <fh_inicio hora="17:00">15-04-2021</fh_inicio>
+        <precio>500</precio>
+        <plazas>9</plazas>
+        <id_monitor>01</id_monitor>
+        <inscritos>12</inscritos>
+        <niño>
+            <nombre>Jose</nombre>
+            <apellido>Batista</apellido>
+            <actividad>Canoa</actividad>
+            <actividad>Escalada</actividad> 
+            <actividad>Rafting</actividad>  
+            <actividad>Tiro</actividad>             
+        </niño>
+        <niño>
+            <nombre>Diego</nombre>
+            <apellido>Calado</apellido>
+            <actividad>Canoa</actividad>            
+        </niño>
+    </campamento>
+    <campamento>
+        <destino>Portugal</destino>
+        <fh_inicio hora="19:00">16-04-2021</fh_inicio>
+        <precio>400€</precio>
+        <plazas>10</plazas>
+        <id_monitor>02</id_monitor>
+        <inscritos/> 
+        <niño>
+            <nombre>Ana</nombre>
+            <apellido>Calado</apellido>
+            <actividad>Tiro</actividad>           
+        </niño>   
+    </campamento>
+
+</empresa>

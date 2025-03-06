@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ej3.xsd"?>
+<peliculas>
+    <pelicula codigo="Abc-23">
+        <nombre>Lo que el viento se llevo</nombre>
+        <genero>accion</genero>
+        <director>John Williams</director>
+        <nacionalidad>Española</nacionalidad>
+        <actor>
+            <nombre>Pedro</nombre>
+            <apellido>Batista</apellido>
+        </actor>
+        <actor fecha_nacimiento="1970-03-06">
+            <nombre>Ana</nombre>
+            <apellido>Batista</apellido>
+        </actor>
+        <oscar>
+            <tipo>director</tipo>
+            <año>1970</año>
+        </oscar>
+        <oscar>
+            <tipo>fotografía</tipo>
+            <año>1981</año>
+        </oscar>
+    </pelicula>
+    <pelicula codigo="Cd-45">
+        <nombre>Paquito en el mar</nombre>
+        <genero>comedia</genero>
+        <director>Lola Flores</director>
+        <nacionalidad>Española</nacionalidad>
+        <actor fecha_nacimiento="2003-02-04">
+            <nombre>Carlos</nombre>
+            <apellido>Calado</apellido>
+        </actor>
+        <oscar>
+            <tipo>actor</tipo>
+            <año>1950</año>
+        </oscar>
+    </pelicula>
+    <pelicula codigo="Fgh-63">
+        <nombre>Bienvenido a Madrid</nombre>
+        <genero>drama</genero>
+        <director>Juan Perico</director>
+        <nacionalidad/>
+        <actor fecha_nacimiento="2001-09-07">
+            <nombre>Enrique</nombre>
+            <apellido>Martín</apellido>
+        </actor>
+    </pelicula>
+</peliculas>

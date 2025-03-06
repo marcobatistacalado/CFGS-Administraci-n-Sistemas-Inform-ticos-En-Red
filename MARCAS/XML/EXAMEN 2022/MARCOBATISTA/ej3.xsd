@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="tipocodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([A-Za-z]{3}[-][0-9]{2})|([A-Za-z]{2}[-][0-9]{2})"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoaño">
+        <xs:restriction base="xs:integer">
+           <xs:maxInclusive value="2022"/>
+           <xs:minInclusive value="1950"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="peliculas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pelicula" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="genero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="accion"/>
+                                        <xs:enumeration value="comedia"/>
+                                        <xs:enumeration value="drama"/>                                    
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="director" type="xs:string" />
+                            <xs:element name="nacionalidad" type="xs:string" minOccurs="0"/>
+                            <xs:element name="actor" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" />
+                                        <xs:element name="apellido" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="fecha_nacimiento" type="xs:date" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="oscar" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo" type="xs:string" />
+                                        <xs:element name="año" type="tipoaño"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="codigo" use="required" type="tipocodigo" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

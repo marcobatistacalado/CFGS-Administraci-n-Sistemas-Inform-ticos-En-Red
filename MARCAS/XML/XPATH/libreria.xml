@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+<libro>
+  <titulo idioma="ing">Harry Potter</titulo>
+  <autor>J K. Rowling</autor>
+  <año>2005</año>
+  <precio>29.99</precio>
+</libro>
+<libro>
+  <titulo idioma="sp">El origen perdido</titulo>
+  <autor>Matilde Asensi</autor>
+  <año>2003</año>
+  <precio>20</precio>
+</libro>
+</libreria>

@@ -1,0 +1,17 @@
+<!ELEMENT empresa (nombre,web,monitor+,campamento+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT monitor (nombre,telefono)>
+<!ATTLIST monitor id ID #REQUIRED>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT campamento (destino,fh_inicio,precio,plazas,id_monitor,inscritos,niño*)>
+<!ELEMENT destino (#PCDATA)>
+<!ELEMENT fh_inicio (#PCDATA)>
+<!ATTLIST fh_inicio hora CDATA #REQUIRED>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT plazas (#PCDATA)>
+<!ELEMENT id_monitor (#PCDATA)>
+<!ELEMENT inscritos (#PCDATA)>
+<!ELEMENT niño (nombre,apellido,actividad+)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT actividad (#PCDATA)>

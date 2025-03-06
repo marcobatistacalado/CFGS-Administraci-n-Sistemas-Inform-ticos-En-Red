@@ -1,0 +1,16 @@
+<!ELEMENT pedido (articulo+,fecha,cliente)>
+<!ELEMENT articulo (nombre,tipo?,precio,codprod)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo EMPTY>
+<!ATTLIST tipo valor (electrico|gasolina) #REQUIRED>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT codprod (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT cliente (comprador,recoger,pago)>
+<!ELEMENT comprador (nombre,ciudad,direccion,codpostal)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT codpostal (#PCDATA)>
+<!ELEMENT recoger (#PCDATA)>
+<!ELEMENT pago (calle,codpostal)>
+<!ELEMENT calle (#PCDATA)>

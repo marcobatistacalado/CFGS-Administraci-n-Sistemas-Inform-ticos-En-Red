@@ -1,0 +1,27 @@
+BEGIN-DATA
+	X=4
+	Y=3
+	Z=?
+END-DATA
+
+BEGIN-CODE
+
+	MUL [X],[X]
+	MOV AC, [Z]
+	SUB [Y],2
+	MOV AC, [Y]
+BUCLE:	SUB [Y],1
+	MOV AC, [Y]
+	MUL [X],[Z]
+	MOV AC, [Z]
+	CMP [Y],1
+	JGE BUCLE
+	
+
+	TERM
+	
+	
+	
+
+	
+END-CODE

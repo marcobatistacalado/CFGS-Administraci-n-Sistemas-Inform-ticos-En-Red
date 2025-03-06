@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form5</title>
+</head>
+<body>
+    <form action="action_page.php">
+        Nombre del alumno:<br/>
+        <input type="text" name="nombre" size="20" maxlength="25"><br/>
+        <br/>
+        Curso:<br/>
+        <input type="radio" name="curso" value="ASIR" checked>ASIR<br/>
+        <input type="radio" name="curso" value="DAW">DAW<br/>
+        <input type="radio" name="curso" value="FIN">FIN<br/>
+        <input type="radio" name="curso" value="MARK">MARK <br/>
+        <br/>
+        ¿Tienes una beca?<br/>
+        <input type="radio" name="beca" value="Sí">Sí<br/>
+        <input type="radio" name="beca" value="No">No<br/>
+        <br/>
+        ¿Qué edad tienes?
+        <input type="number" name="edad" min="1" max="99" size="2"><br/>
+        <br/>
+        Observaciones:<br/>
+        <textarea name="observaciones" rows="4" maxlength="4"></textarea><br/>
+        <br/>
+        Año escolar:<br/>
+        <input type="radio" name="año" value="primero">Primero<br/>
+        <input type="radio" name="año" value="segundo">Segundo<br/>
+        <br/>
+        Contraseña:<br/>
+        <input type="password" name="contraseña" maxlength="8">
+        <br/><br/>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>

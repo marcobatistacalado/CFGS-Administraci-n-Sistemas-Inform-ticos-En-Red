@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad1 {
+    height: 150px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+}
+#grad2 {
+    height: 150px;
+    background: red; /* For browsers that do not support gradients */    
+    background: linear-gradient(to right, red , yellow); /* Standard syntax (must be last) */
+}
+#grad3 {
+    height: 150px;
+    background: red; /* For browsers that do not support gradients */    
+    background: linear-gradient(to top left, red, yellow); /* Standard syntax (must be last) */
+}
+#grad4 {
+    height: 150px;
+    background: red; /* For browsers that do not support gradients */    
+    background: radial-gradient(red, yellow, green); /* Standard syntax (must be last) */
+}
+</style>
+</head>
+<body>
+
+
+
+<div id="grad1">Lineal por defecto</div>
+<div id="grad2">Lineal por un lado</div>
+<div id="grad3">Lineal diagonal</div>
+<div id="grad4">Radial</div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="TareaMarcas2.xslt"?>
+<TORNEOS>
+ 
+    <TORNEO>
+     <ID_TORNEO>C35</ID_TORNEO>
+     <COD_ZONA>2</COD_ZONA>
+     <JUEGO>
+       <NOMBRE_JUEGO>Valorant</NOMBRE_JUEGO>
+       <DESARROLLADOR>Riot Games</DESARROLLADOR>
+       <TIPO>FPS</TIPO>
+       <DESCRIPCION>Shooter competitivo.</DESCRIPCION>
+     </JUEGO>
+     <HORARIO>20/03/22</HORARIO>
+     <CLASIFICACION>3</CLASIFICACION>
+     <DURACION>20</DURACION>
+    </TORNEO>
+    
+    <TORNEO>
+     <ID_TORNEO>C28</ID_TORNEO>
+     <COD_ZONA>2</COD_ZONA>
+     <JUEGO>
+       <NOMBRE_JUEGO>LeagueOfLegends</NOMBRE_JUEGO>
+       <DESARROLLADOR>Riot Games</DESARROLLADOR>
+       <TIPO>MOBA</TIPO>
+       <DESCRIPCION>Juego estratégico competitivo.</DESCRIPCION>
+     </JUEGO>
+     <HORARIO>18/02/22</HORARIO>
+     <CLASIFICACION>3</CLASIFICACION>
+     <DURACION>20</DURACION>
+    </TORNEO>
+    
+    <TORNEO>
+     <ID_TORNEO>C12</ID_TORNEO>
+     <COD_ZONA>2</COD_ZONA>
+     <JUEGO>
+       <NOMBRE_JUEGO>Clash Royale</NOMBRE_JUEGO>
+       <DESARROLLADOR>Supercell</DESARROLLADOR>
+       <TIPO>Cartas</TIPO>
+       <DESCRIPCION>Batalla de arena estratégica.</DESCRIPCION>
+     </JUEGO>
+     <HORARIO>18/12/19</HORARIO>
+     <CLASIFICACION>3</CLASIFICACION>
+     <DURACION>20</DURACION>
+    </TORNEO>
+    
+    <TORNEO>
+     <ID_TORNEO>C92</ID_TORNEO>
+     <COD_ZONA>2</COD_ZONA>
+     <JUEGO>
+       <NOMBRE_JUEGO>Clash Royale</NOMBRE_JUEGO>
+       <DESARROLLADOR>Supercell</DESARROLLADOR>
+       <TIPO>Cartas</TIPO>
+       <DESCRIPCION>Batalla de arena estratégica.</DESCRIPCION>
+     </JUEGO>
+     <HORARIO>27/07/22</HORARIO>
+     <CLASIFICACION>3</CLASIFICACION>
+     <DURACION>18</DURACION>
+    </TORNEO>
+    
+   </TORNEOS>
+   

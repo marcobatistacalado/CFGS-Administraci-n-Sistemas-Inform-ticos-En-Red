@@ -1,0 +1,21 @@
+BEGIN-DATA
+	A=5
+	B=3
+	C=?
+
+END-DATA
+
+BEGIN-CODE
+	CMP [A],[B]
+	JLT MAYOR
+	JLE MENOR
+MAYOR:	SUB[A],[B]
+	MOV AC,[C]
+	TERM
+MENOR:	SUB[B],[A]
+	MOV AC,[C]
+	TERM
+	
+	
+
+END-CODE

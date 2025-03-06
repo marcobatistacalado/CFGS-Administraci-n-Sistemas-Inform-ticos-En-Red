@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="info%20persona.xsd">
+    <persona sexo="hombre">
+        <dni>1234567A</dni>
+        <fhnac>2000-02-12</fhnac>
+        <tel tipo="fijo">912123123</tel>
+        <edad>21</edad>
+
+        <incidencia>
+            <cod>123</cod>
+            <descripcion>No tiene datos</descripcion>
+            <resulto valor="si" />
+        </incidencia>
+
+        <incidencia>
+            <cod>213</cod>
+            <descripcion>No da tono</descripcion>
+            <resulto valor="no" />
+        </incidencia>
+    </persona>
+
+    <persona sexo="mujer">
+        <dni>12345678B</dni>
+        <fhnac>1998-03-04</fhnac>
+        <tel tipo="movil">693321321</tel>
+        <edad>23</edad>
+    </persona>
+</personas>

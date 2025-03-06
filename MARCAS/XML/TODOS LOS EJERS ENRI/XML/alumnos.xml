@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE polideportivo SYSTEM "alumnos.dtd">
+<polideportivo>
+
+    <curso_natacion identificador="C128" nivel="inicial">
+
+        <hora_inicio>12:00</hora_inicio>
+        <duracion>1</duracion>
+        <dias valor="lunes"></dias>
+        <profesor>Miguel Pijala</profesor>
+
+        <alumno discapacidad="si">
+            <nombre>Antonio Marmitaco</nombre>
+            <edad>12</edad>
+        </alumno>
+
+        <alumno discapacidad="si">
+            <nombre>Pedro Picoletos</nombre>
+            <edad>14</edad>
+        </alumno>
+
+    </curso_natacion>
+
+    <curso_natacion identificador="B096" nivel="medio">
+
+        <hora_inicio>20:00</hora_inicio>
+        <duracion>2</duracion>
+        <dias valor="martes"></dias>
+        <profesor>Rodrigo Monte</profesor>
+
+        <alumno discapacidad="no">
+            <nombre>Jorge Lalo</nombre>
+            <edad>18</edad>
+        </alumno>
+
+        <alumno discapacidad="no">
+            <nombre>Jose Gonzo</nombre>
+            <edad>16</edad>
+        </alumno>
+
+    </curso_natacion>
+
+</polideportivo>

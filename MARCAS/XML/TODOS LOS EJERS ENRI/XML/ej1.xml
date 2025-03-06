@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE grupo SYSTEM "ej11.dtd">-->
+<grupo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="ej1.xsd">
+    <nombre>Fito &amp; Fitipaldis</nombre>
+    <disco>
+        <titulo>Por la boca muere el pez</titulo>
+        <tema>Me equivocaría otra vez</tema>
+        <tema>Como pollo sin cabeza</tema>
+        <tema>Sobra la luz</tema>
+        <año>2006</año>
+    </disco>
+    <disco>
+        <titulo>Lo más lejos a tu lado</titulo>
+    </disco>
+</grupo>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Selectores de atributos</title>
+    <style type="text/css">
+        h1::before {
+            content: "Esto es ";
+        }
+        
+        h1::after {
+            content: " 1";
+        }
+        /* Contiene la palabra ejemplo */
+        
+        a[href*="ejemplo"] {
+            color: red;
+        }
+        /* Empieza por mailto */
+        
+        a[href^="mailto:"] {
+            color: blue;
+        }
+        /* Termina por .php */
+        
+        a[href$=".php"] {
+            color: green;
+        }
+        
+        a::before {
+            border-bottom-style: solid;
+            content: "";
+            display: block;
+            height: 20px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Título</h1>
+    <ul>
+        <li><a href="http://wwww.ejemplos.HTML">Esto es un enlace a un ejemplo y aparecer&aacute; en rojo</a></li>
+        <li><a href="mailto:direccion@decorreo.com">Esto es un enlace a una direcci&oacute;n de correo y aparecer&aacute; en azul</a></li>
+        <li><a href="http://wwww.ejemplos.php">Esto es un enlace a una p&aacute;gina php y aparecer&aacute; en verde</a></li>
+    </ul>
+</body>
+
+</html>

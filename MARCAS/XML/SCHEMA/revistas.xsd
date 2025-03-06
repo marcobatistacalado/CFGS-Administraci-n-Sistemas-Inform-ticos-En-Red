@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- derinición tipos simples -->
+
+<xs:simpleType name="nombreType">
+	<xs:restriction base="xs:string">
+		<xs:maxLength value="32"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="codigoType">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[0-9]{10}"/>
+	</xs:restriction>
+</xs:simpleType>
+
+
+<!-- definición tipos complejos -->
+
+<xs:complexType name="articuloType">
+	<xs:sequence>
+		<xs:element name="titulo" type="nombreType"/>
+	  <xs:element name="autor" type="nombreType" minOccurs="0" maxOccurs="unbounded"/>
+	  <xs:element name="numeropalabras" type="xs:integer"/>
+	  <xs:element name="texto" type="xs:string"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revistaType">
+	<xs:sequence>
+		<xs:element name="nombre" type="nombreType"/>
+	  <xs:element name="fechasalida" type="xs:date"/>
+	  <xs:element name="articulo" type="articuloType" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>
+	
+   <xs:attribute name="codigo" type="codigoType" use="required"/>
+   
+</xs:complexType>
+
+<!--creación o instanciación del elemento revista-->
+<xs:element name="revista" type="revistaType"/>
+
+</xs:schema>

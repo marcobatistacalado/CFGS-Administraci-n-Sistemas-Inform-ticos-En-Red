@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE polideportivo SYSTEM "EJ2.2.dtd">
+<polideportivo>
+    <curso id="c24" nivel="inicial" >
+        <horai>5</horai>
+        <duracion>6</duracion>
+        <dia></dia>
+        <profesor>Pedro</profesor>
+        <alumno>
+            <nombre>Marco</nombre>
+            <edad>19</edad>
+            <discapacidad>Si</discapacidad>
+        </alumno>
+    </curso>
+</polideportivo>

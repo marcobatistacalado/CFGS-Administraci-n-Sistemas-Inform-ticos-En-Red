@@ -1,0 +1,14 @@
+<!ELEMENT libro-direcciones (entrada)+>
+<!ELEMENT entrada (nombre,direccion*,tel*,email*,comentarios?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (calle,codigo-postal,localidad,pais)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT codigo-postal (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ATTLIST tel principal (si|no) "no">
+<!ELEMENT fax (#PCDATA)>
+<!ELEMENT email EMPTY>
+<!ATTLIST email href CDATA #REQUIRED>
+<!ELEMENT comentarios (#PCDATA)>

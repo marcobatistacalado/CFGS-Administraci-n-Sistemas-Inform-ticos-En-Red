@@ -1,0 +1,19 @@
+BEGIN-DATA
+	A=4
+	B=6
+	C=8
+	FACT=?
+END-DATA
+
+BEGIN-CODE
+	MUL [A],[A]
+	MOV AC,[A]
+	MUL [B],[B]
+	MOV AC,[B]
+	MUL [C],[C]
+	MOV AC,[C]
+	ADD [A],[B]
+	ADD AC,[C]
+	TERM
+	
+END-CODE

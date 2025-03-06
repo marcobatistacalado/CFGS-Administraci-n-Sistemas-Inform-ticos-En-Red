@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros SYSTEM "libros1.dtd">
+<libros>
+    <libro>
+        <titulo>Has caido en mi trampa</titulo>
+        <autor>Lorca</autor>
+        <isbn>598668558</isbn>
+        <precio>5€</precio>
+    </libro>
+    <libro>
+        <titulo>Lo mejor de la guerra</titulo>
+        <autor>Lorca</autor>
+        <autor>Salvador Dalí</autor>
+        <isbn>4646465645</isbn>
+        <precio>7€</precio>
+    </libro>
+    <libro>
+        <titulo>Has caido en mi trampa</titulo>
+        <autor>Cervantes</autor>
+        <precio>6€</precio>
+    </libro>
+    <libro>
+        <titulo>Que dia mas aburrido</titulo>
+        <autor>Mary Shelley</autor>
+        <isbn>598668558</isbn>
+        <precio>5€</precio>
+        <precio>3€</precio>
+    </libro>
+    <libro>
+        <titulo>Hoy hay clase</titulo>
+        <autor>Rosa Mela</autor>
+        <isbn>892566524</isbn>
+    </libro>
+</libros>

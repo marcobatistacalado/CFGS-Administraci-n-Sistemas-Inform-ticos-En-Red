@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alquiler SYSTEM "alquiler.dtd">
+<alquiler>
+    <polideportivo>
+        <nombre>San Chad</nombre>
+        <direccion>C/El mazas,69</direccion>
+        <precio hora="12:00">22€</precio>
+
+        <pista tipo="padel" cubierta="si">
+            <numero>12</numero>
+        </pista>
+
+
+        <pista tipo="tenis" cubierta="no">
+            <numero>8</numero>
+            <reserva luz="si">
+                <fecha hora_inicio="13:00" hora_fin="15:00">12/3/2021</fecha>
+                <persona>
+                    <nombre>Manuel Avova</nombre>
+                    <numsocio>7690</numsocio>
+                </persona>
+            </reserva>
+        </pista>
+
+        
+
+    </polideportivo>
+
+    <polideportivo>
+        <nombre>Coto del Duque</nombre>
+        <direccion>C/Blanca,42</direccion>
+        <precio hora="9:00">18€</precio>
+
+        <pista tipo="padel" cubierta="no">
+            <numero>7</numero>
+        </pista>
+
+
+        <pista tipo="tenis" cubierta="si">
+            <numero>2</numero>
+        </pista>
+
+    </polideportivo>
+
+</alquiler>

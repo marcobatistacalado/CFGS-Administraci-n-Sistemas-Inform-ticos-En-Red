@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="alquiler">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="polideportivo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="direccion" type="xs:string" />
+                            <xs:element name="precio" type="xs:string" />
+                            <xs:element name="pista" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="numero" type="xs:string" />
+                                        <xs:element name="reserva" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fecha" type="xs:string" />
+                                                    <xs:element name="hora_incio" type="xs:string" />
+                                                    <xs:element name="hora_fin" type="xs:string" />
+                                                    <xs:element name="socio">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="nombre" type="xs:string" />
+                                                                <xs:element name="numero" type="xs:string" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="luz" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="tipo" use="required" />
+                                    <xs:attribute name="cubierta" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

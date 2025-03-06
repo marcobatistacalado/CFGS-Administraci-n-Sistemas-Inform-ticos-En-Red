@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    font-size: 20px;
+
+}
+#navegar{
+    height: 60px;
+    background-color: black;
+}
+#centrado{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+#titulo{
+    font-size: 50px;
+    text-shadow: 2px 2px 2px aliceblue;
+    width: 60%;
+    float: left;
+    color: white;
+}
+#lista{
+    float:left;
+    width: 40%;
+}
+#lista ul li{
+    list-style-type: none;
+}
+#lista ul li a{
+    text-decoration: none;
+    padding: 18px;
+    color: white;
+    float: left;
+}
+#lista ul li a:hover{
+    color: white;
+    text-decoration: underline;
+}
+#portada{
+    background-image: url(./imagenes/AmsterdamP1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+#portada a{
+    color:white;
+    font-size: 25px;
+    position:relative;
+    top: 95%;
+    left: 95%;
+}
+#portada a:hover{
+    text-decoration: none;
+    font-style: italic;
+}
+#container{
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#txt1{
+    width: 40%;
+    font-size:40px;
+    height: 100px;
+    float: left;
+    font-weight: bold;
+}
+#txt2{
+    width: 60%;
+    background-color: aliceblue;
+    float: left;
+    height: 100px;
+    font-size: 25px;
+}
+#tituloimg{
+    border-style: solid;
+    border-top-color: white;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.fotos{
+    width: 33.33%;
+    float: left;
+    padding:20px;
+    margin-top: 40px;
+
+}
+.fotos img{
+    width: 80%;
+    box-shadow: 2px 2px 2px black;
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius:60%;
+
+}
+#pie{
+    height: 40px;
+    margin-top: 40px;
+    float: left;
+    text-align: center;
+}
+.pie1{
+    background-color: aliceblue;
+    width: 80%;
+    padding-left: 2%;
+    vertical-align: middle;
+}

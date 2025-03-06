@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="colegio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomdir" type="xs:string" />
+                <xs:element name="cursos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nivel" type="xs:string" />
+                            <xs:element name="nomtut" type="xs:string" />
+                            <xs:element name="nomdel" type="xs:string" />
+                            <xs:element name="nomalu" minOccurs="0" type="xs:string" />
+                            <xs:element name="edad"  minOccurs="0" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

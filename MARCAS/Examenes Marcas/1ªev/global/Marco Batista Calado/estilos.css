@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+div{
+    box-shadow: 2px 2px 2px darkgray;
+    
+}
+#primero{
+    height: 70px;
+    width: 100%;
+    background-color: darkorange;
+}
+#imagenes{
+    margin-left: 73%;
+}
+#primero img{
+    float:left;
+    padding-left: 20px;
+    vertical-align: middle; 
+    padding-top: 10px;
+}
+#navegar{
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+#navegar img{
+    display: block;
+    padding-left: 200px;
+    width: 200px;
+    float:left
+    
+}
+#navegar li{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 2%;
+    display: inline-block;
+    list-style-type: none;
+    background-color: aquamarine;
+    height: 70px;
+    padding-top: 10px;
+    box-shadow: 2px 2px 2px darkgray;
+    width: 15%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+}
+a:hover{
+    color: darkorange;
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: white;
+}
+#portada{
+    background-image: url(./imagenes/otra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1200px;
+    height: 68vh;
+    margin:auto
+
+}
+#portada p{
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    text-shadow: darkgray;
+    text-align: center;
+    color: white;
+    padding-top: 10%;
+}
+.reserva{
+    height: 70px;
+    font-size: 3em;
+    background-color: aquamarine;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+#anuncio{
+    width: 1200px;
+    font-family: 1.5em;
+    text-indent: 40px;
+    color:darkgray;
+    margin:auto;
+    box-shadow: none;
+    padding:15px;
+    overflow: auto;
+
+}
+#anuncio img{
+    float: right;
+    width: 35vh;
+    padding:15px;
+}
+#anuncio ul{
+    list-style-position: inside;
+    text-align: center;
+}
+#anuncio span{
+    color:darkorange;
+    font-style: italic;
+    font-weight: bold;
+}
+#contacta{
+    background-color: darkorange;
+}
+#formulario form{
+    width: 1200px;
+    margin:auto;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    color:darkgray;
+}
+fieldset{
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius:20px;
+
+}

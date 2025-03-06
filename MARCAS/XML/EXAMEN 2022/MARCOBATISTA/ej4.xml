@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="trenes.dtd"?>
+<trenes>
+    <ave modelo="rápido">
+        <codigo>101</codigo>
+        <origen>Madrid</origen>
+        <destino>Valencia</destino>
+        <fecha>2022-04-04</fecha>
+        <hora>15</hora>
+        <vagon>
+            <numero>1550</numero>
+            <cafeteria/>
+            <plaza tipo="pasillo">
+                <num>5</num>
+                <nombre>Marco</nombre>
+                <menor/>
+            </plaza>
+        </vagon>
+        <vagon>
+            <numero>1300</numero>
+        </vagon>
+    </ave>
+    <ave>
+        <codigo>102</codigo>
+        <origen>Madrid</origen>
+        <destino>BArcelona</destino>
+        <fecha>2022-04-04</fecha>
+        <hora>17</hora>
+        <vagon>
+            <numero>1550</numero>
+            <cafeteria/>
+            <plaza tipo="pasillo">
+                <num>6</num>
+                <nombre>Pedro</nombre>
+                <menor/>
+            </plaza>
+            <plaza tipo="ventanilla">
+                <num>7</num>
+                <nombre>Jose</nombre>
+            </plaza>
+        </vagon>
+    </ave>
+</trenes>

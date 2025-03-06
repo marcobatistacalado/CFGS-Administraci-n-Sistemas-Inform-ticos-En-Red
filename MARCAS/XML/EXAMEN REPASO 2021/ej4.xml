@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ej4.dtd"?>
+<libreria>
+    <envio>
+       <nombre>Pedro</nombre>
+       <receptor>
+           <apartado-correos>2888</apartado-correos>
+       </receptor>
+       <ciudad>Madrid</ciudad>
+       <codigo>28039</codigo>
+       <pais>España</pais>
+       <item>
+           <titulo>Has caid0</titulo>
+           <unidades>m</unidades>
+           <precio moneda="dolar">5</precio>
+           <observaciones>Hola</observaciones>
+       </item>
+       <item>
+        <titulo>Has caid0</titulo>
+        <unidades>m</unidades>
+        <precio moneda="dolar">5</precio>
+        <observaciones>Hola</observaciones>
+        </item>
+    </envio>
+    <envio>
+        <nombre>Jose</nombre>
+       <receptor>
+           <domicilio>
+               <nombre-receptor>Josete</nombre-receptor>
+               <calle>dolores</calle>
+               <numero>2</numero>
+           </domicilio>
+       </receptor>
+       <ciudad>Madrid</ciudad>
+       <codigo>28039</codigo>
+       <pais>España</pais>
+       <item>
+            <titulo>Has caid0</titulo>
+            <unidades>m</unidades>
+            <precio moneda="euro">5</precio>
+            <observaciones>Hola</observaciones>
+        </item>
+    </envio>
+</libreria>

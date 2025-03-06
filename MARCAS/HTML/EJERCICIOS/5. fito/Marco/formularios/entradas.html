@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entradas</title>
+</head>
+<body style="text-align: center;">
+    <div style="text-align:center"><img src="../imagenes/giradeconciertos.png"></div><br/>
+    <form style="width:50%; margin:auto">
+        <fieldset style="width: 500px; text-align: center;">
+            <legend>Entradas</legend>
+            Ciudad: <select name="nombre">
+                <option>Madrid</option>
+                <option>Bilbao</option>
+                <option>Santander</option>
+                <option>Salamanca</option>
+                </select>
+            <br/><br/>
+            Número: <input type="number"placeholder="entrada" maxlength="2" max="10" min="0"><br/><br/>
+            <input type="checkbox" name="patio" checked>Patio<br/><br/>
+            Comentarios:<textarea name="patio">Anota tus preferencias</textarea>
+        </fieldset>
+
+        <fieldset style="width: 500px; text-align: center;">
+            <legend>Datos compra</legend>
+            <p>Tipo de tarjeta:</p>
+            <input type="radio" name="tarjeta" checked>VISA
+            <input type="radio" name="tarjeta" >MASTERCARD
+            <br/><br/>
+            Número de tarjeta: <input type="text"placeholder="entrada" maxlength="2" required><br/><br/>
+            <div style="text-align: right;">
+            <input type="submit" value="COMPRAR">
+            <input type="reset" value="BORRAR DATOS">
+            </div>
+        </fieldset>
+    </form><br/>
+    <a href="../index2.html"><div style="text-align: left;"><img src="../imagenes/flecha.jpg" width="50px"></div></a>
+
+</body>
+</html>

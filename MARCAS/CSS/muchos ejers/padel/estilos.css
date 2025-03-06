@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: padel;
+    src: url(./enunciado/amsterdam.ttf);
+}
+
+body{
+    background-image: url(./enunciado/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#menu{
+    height: 50px;
+}
+#menu ul li{
+    list-style-type: none;
+    float: left;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#menu ul li a{
+    width: 15%;
+    font-size: 1.5em;
+    color: white;
+}
+#menu ul li a:hover{
+    text-decoration: none;
+    background-color: white;
+    color: #5c6489;
+}
+#cabecera{
+    height: 120px;
+    text-align: center;
+}
+.titulo{
+    font-size: 100px;
+    font-family: padel;
+    letter-spacing: 0.5em;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+}
+#contenido{
+    width: 90%;
+    margin:auto;
+    background-color: #EEE;
+    overflow: auto;
+    height: auto;
+}
+.borde{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.col1{
+    width: 38%;
+    float:left;
+    border-right-style: solid;
+    border-right-color: darkgray;
+    height: 500px;
+}
+#apDiv1{
+    position: absolute;
+    left: 19%;
+    top: 20%;
+}
+#imgizq{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    padding-left: 28%;
+}
+
+.col1 ul{
+    padding-left:28%;
+}
+.col1 ul li{
+    list-style-image: url(./enunciado/pelota2.jpg);
+
+}
+.iconos{
+    padding-left: 40%;
+    padding-top: 2%;
+}
+.iconos img{
+    padding-left: 2%;
+}
+#col2{
+    width: 60%;
+    height: 500px;
+    float: left;
+    text-align: justify;
+    text-indent: 30%;
+
+}
+#col2 img{
+    float: right;
+    padding-top: 15px;
+}
+
+#col2::first-letter{
+    font-size: 2em;
+}

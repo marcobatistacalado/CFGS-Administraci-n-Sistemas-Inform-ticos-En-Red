@@ -1,0 +1,9 @@
+<!ELEMENT colegio (nom_director,curso)>
+<!ELEMENT nom_director (#PCDATA)>
+<!ELEMENT curso (nivel,nom_tutor,nom_delegado,alumno)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT nom_tutor (#PCDATA)>
+<!ELEMENT nom_delegado (#PCDATA)>
+<!ELEMENT alumno (nombre,edad)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
