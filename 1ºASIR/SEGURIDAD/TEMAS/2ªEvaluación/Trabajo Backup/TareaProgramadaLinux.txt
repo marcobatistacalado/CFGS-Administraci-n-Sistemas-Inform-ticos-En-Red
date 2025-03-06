@@ -1,0 +1,18 @@
+Para crear una tarea programada se ejecuta el siguiente comando en Linux:
+ crontab -e
+ (la primera vez pedirá elegir un editor de textos -> nano)
+
+ Al final del fichero hay que rellenar la información de tiempo y el comando a ejecutar según la siguiente estructura:
+ Minutos(m) Horas(h) Día del mes(dom) Mes(mon) Día de la semana(dow) Comando
+
+ En cada apartado separado por espacios se pone un valor concreto o un * indicando que nos es indiferente y asume todos los valores.
+ Por ejemplo si ponemos 10 en minutos y 8 en horas, se refiere a las 8:10
+  si ponemos 15 en minutos y * en horas, se refiere a las 0:15, 1:15, 2:15, etc... (es decir, se ejecutaría cada hora a "y cuarto")
+
+ Lo mismo para el día del mes, mes y día de la semana (1-Lunes, 2-Martes, etc...)
+
+ Ejemplo:
+  m h dom mon dow comando
+  0 20 1  *   *   cp /home/asir1/documentos /home/asir1/backup
+  (haría la copia a las 20:10 de cada día 1 de cada mes)
+

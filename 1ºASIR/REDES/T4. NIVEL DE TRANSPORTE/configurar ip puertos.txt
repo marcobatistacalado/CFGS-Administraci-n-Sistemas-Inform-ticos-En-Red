@@ -1,0 +1,8 @@
+windows:
+	-IP local/remota
+	-Puerto local/remoto
+
+comodo:
+	-IP origen/destino
+	-Puerto origen/destino
+qn manda el paquete y a donde va el paquete

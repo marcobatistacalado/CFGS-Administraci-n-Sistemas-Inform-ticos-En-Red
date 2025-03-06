@@ -1,0 +1,34 @@
+Práctica GParted + Clonezilla
+0.Preparación (VirtualBox + GParted)
+  - Crear un disco de 20GB (sda)
+  - Crear una partición de 10GB (sda1)
+  - Crear otra partición de 10GB (sda2)
+  - Crear un disco de 20GB (sdb)
+  - Crear una partición de 20GB (sdb1)
+1.Clonar sda1 en sda2 (Clonezilla)
+  - device-device
+  - Elegir sda1 como origen
+  - Elegir sda2 como destino
+2.Clonar sda en una imagen y guardarla en sdb1 (Clonezilla)
+  - device-image
+  - Seleccionar sdb1 como localización de la imagen
+  - Elegir la raíz de sdb1 como directorio de la imagen
+  - save disk
+  - Elegir sda como origen
+3.Restaurar la imagen anterior en sdc (GParted + Clonezilla)
+  - Crear un disco de 20GB (sdc)
+  - Crear una partición de 20GB (sdc1)
+  - device-image
+  - Seleccionar sdb1 como localización de la imagen
+  - Elegir la raíz de sdb1 como directorio de la imagen
+  - restore disk
+  - Elegir sdc como destino
+  - Con GParted comprobar que sdc es un clon de sda
+4.Clonar un disco de una máquina virtual existente (VirtualBox + GParted + Clonezilla)
+  - Crear un disco del mismo tamaño que el existente
+  - Crear una única partición en ese disco
+  - device-device
+  - Seleccionar el disco de la máquina virtual como origen
+  - Seleccionar el nuevo disco como destino
+  - Arrancar la máquina virtual y ver que hay 2 discos idénticos
+
