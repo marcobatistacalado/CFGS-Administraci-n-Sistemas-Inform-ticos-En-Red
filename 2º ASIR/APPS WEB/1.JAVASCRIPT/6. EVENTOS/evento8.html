@@ -1,0 +1,35 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marco Batista</title>
+
+    <script>
+    
+		function cambiar(elemento){
+            altura=Number(elemento.height);
+            menosaltura=altura/2;
+            ancho=Number(elemento.width);
+            menosancho=ancho/2;
+			elemento.height=menosaltura;
+            elemento.width=menosancho;
+
+		}
+        function otro(elemento){
+            altura2=Number(elemento.height);
+            menosaltura2=altura2*2;
+            ancho2=Number(elemento.width);
+            menosancho2=ancho*2;
+			elemento.height=menosaltura2;
+            elemento.width=menosancho2;
+        }
+    </script>
+</head>
+
+<body >
+<img src="./gata.jpg" onclick="cambiar(this)" ondblclick="otro(this)">
+
+</body>
+</html>

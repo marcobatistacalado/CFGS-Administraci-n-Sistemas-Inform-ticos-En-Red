@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+    <script>
+        function validar(){
+            var cuantos=0;
+            if (document.getElementById("dep1").checked == true)
+                cuantos ++;
+            if (document.getElementById("dep2").checked == true)
+                cuantos ++;
+            if (document.getElementById("dep3").checked == true)
+                cuantos ++;
+
+            if (cuantos == 0)
+                alert("Mal hecho");
+            if (cuantos == 1)
+                alert("Deberías hacer más deporte");
+            if (cuantos == 2)
+                alert("Eres un deportista");
+            if (cuantos == 3)
+                alert("Fenomenal");
+            //cuando usamos un input de texto
+            
+        }
+        
+    </script>
+    <form name="miformulario">
+        <p>Indica los deportes que realizas:<br/><br/>
+            Futbol <input type="checkbox" id="dep1"><br/><br/>
+            Basket <input type="checkbox" id="dep2"><br/><br/>
+            Tennis <input type="checkbox" id="dep3"><br/><br/>
+        </p>
+        
+        <p><input type="button" value="ENVIAR" onclick="validar()"></p>
+    </form>
+
+ 
+</body>
+</html>

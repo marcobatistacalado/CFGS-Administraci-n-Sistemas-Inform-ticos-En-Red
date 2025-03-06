@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+    <script>
+    var a=1;
+    var mayores=0;
+    var menores=0;
+    while(a<=10){
+        var num=Number(prompt("Introduce una nota: "));
+        //tambn podriamos controlar que la nota este entre 0 y 10 y haga esto o vuelva a pedir con a--;
+        if (num>=7) mayores=mayores+1;
+        if (num<7) menores=menores+1;
+        a++;
+    }
+    document.write("Notas mayores o iguales que 7: "+mayores+"</br>")
+    document.write("Notas menores que 7: "+menores)
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <style>
+        form {
+            margin: auto;
+            width: 40%;
+            text-align: center;
+        }
+        
+        .centrar {
+            text-align: center;
+        }
+        
+        .dcha {
+            text-align: right;
+        }
+        
+        input,
+        select {
+            border-radius: 5px;
+        }
+        
+        legend {
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <br /><br />
+    <div class="centrar">
+        <img src="giradeconciertos.png">
+    </div>
+    <br /><br />
+    <form>
+
+        <fieldset>
+            <legend>Entradas</legend>
+            <p>Ciudad:
+                <select>
+					<option>Anota opcion</option>
+					<option>Madrid</option>
+					<option>Santander</option>
+					<option>Bilbao</option>
+				</select>
+            </p>
+            <p>N&uacute;mero de entradas:<input type="text" size="2"></p>
+            <p><input type="radio" name="tipo">Pista
+                <input type="radio" name="tipo">Grada
+                <input type="radio" name="tipo">Palco
+            </p>
+            <p><input type="checkbox">Descuento</p>
+
+        </fieldset>
+
+        <br /><br />
+        <fieldset>
+            <legend>Datos compra</legend>
+
+            <p>N&uacute;mero de tarjeta:<input type="text" size="19" placeholder="XXXX XXXX XXXX XXXX" maxlength="19"> </p>
+            <p>fecha de caducidad:<input type="text" placeholder="MM/AA" size="5"> código CVV2:<input type="text" size="3"></p>
+            <p class="dcha"><input type="submit" value="COMPRAR"></p>
+        </fieldset>
+
+    </form>
+
+
+
+
+</body>
+
+</html>

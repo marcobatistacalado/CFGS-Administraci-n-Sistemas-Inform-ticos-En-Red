@@ -1,0 +1,12 @@
+Ryu;Japon;175cm;85kg
+E.Honda;Japon;185cm;137kg
+Blanka;Brasil;192cm;98kg
+Guile;USA;182cm;86kg
+Ken;USA;175cm;83kg
+Chun-Li;China;165cm;61kg
+Zangief;Rusia;214cm;115kg
+Dhalsim;India;176cm;49kg
+Balrog;USA;198cm;102kg
+Vega;España;186cm;84kg
+Sagat;Tailandia;226cm;98kg
+M.Bison;Tailandia;182cm;112kg

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+    <script>
+        function tabla(a){
+            contador=1;
+            document.write("<table style='border-style:solid; border-color:black;width:500px;height:500px'>");
+            while(contador <= a){
+                document.write("<tr>")   
+                    contador2=1;
+                    q= contador % 2;
+                if(q==0){
+                    while(contador2 <= a){
+                        p= contador2 % 2;
+                        contador2++;
+                        if (p==0){
+                            document.write("<th style='background-color:#B59B7C'></th>");
+                        }
+                            
+                            
+                        else{
+                            document.write("<th style='background-color:#804000'></th>");
+                        }
+                
+                    }
+                }
+                else{
+                    while(contador2 <= a){
+                        p= contador2 % 2;
+                        contador2++;
+                        if (p==0){
+                            document.write("<th style='background-color:#804000'></th>");
+                        }
+                        else{
+                            document.write("<th style='background-color:#B59B7C'></th>");}
+                        }
+                        
+                    }
+                    contador++;
+                }
+                document.write("</tr>")
+                contador++;
+
+                document.write("</table>")
+            }
+    </script>
+    <h2>Probando funciones </h2>
+    <script>
+        var cad=Number(prompt("Escribe una cadena: "));
+        document.write(tabla(cad));
+    </script>
+</body>
+</html>

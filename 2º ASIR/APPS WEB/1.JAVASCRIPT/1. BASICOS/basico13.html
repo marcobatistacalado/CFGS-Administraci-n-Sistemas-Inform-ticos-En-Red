@@ -1,0 +1,31 @@
+<html>
+<body>
+    <script>
+        var dni=prompt("Anota DNI: ");
+        var censo = 0;
+        var hombre=0;
+        var mujer=0;
+        var adulto=0;
+
+        while(dni != 0){
+            edad=prompt("Introduce tu edad: ");
+            sexo=prompt("Introduce tu sexo: ");
+            censo++;
+            if(sexo == "hombre"){
+                hombre++;
+                if(edad >= 16 && edad < 65)
+                    adulto++;
+                }
+            else if(sexo == "mujer"){
+                mujer++;
+            }
+            
+            dni=prompt("Anota tu DNI");
+        }
+        document.write("Hay"+censo+"personas");
+        document.write("Hay"+hombre+"hombres");
+        document.write("Hay"+mujer+"mujeres");
+        document.write("Hay"+adulto+"personas entre 16 y 65 años");
+    </script>
+</body>
+</html>

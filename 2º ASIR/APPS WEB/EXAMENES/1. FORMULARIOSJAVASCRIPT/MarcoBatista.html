@@ -1,0 +1,220 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marco Batista</title>
+	<style type="text/css">
+		body {
+			background-color: orange;
+		}
+
+		fieldset {
+
+			width: 450px;
+			background-repeat: no-repeat;
+			margin: auto;
+			margin-top: 40px;
+			text-align: center;
+		}
+
+		#container {
+			background-color: rgba(255, 255, 255, 0.8);
+			width: 850px;
+			margin-right: auto;
+			margin-left: auto;
+			height: 700px;
+			position: relative;
+			box-shadow: 4px 4px 4px #666;
+			top: 20px;
+		}
+
+		#contenido {
+			position: absolute;
+			width: 563px;
+			left: 145px;
+			top: 180px;
+			height: 450px;
+		}
+
+		.borde {
+			border-radius: 20px;
+			background-color: #EEE;
+		}
+
+
+		#apDiv7 {
+			position: absolute;
+			width: 230px;
+			height: 39px;
+			z-index: 1;
+			left: 589px;
+			top: 654px;
+			font-style: italic;
+		}
+
+		#container #contenido #form1 p {
+			text-align: center;
+		}
+
+		#cabecera {
+			position: relative;
+			top: 50px;
+			width: 600px;
+			height: 50px;
+			margin: auto;
+			background-color: orange;
+			text-align: center;
+			font-size: 40px;
+		}
+
+		#resultado {
+			position: relative;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<script>
+		function calculo(){
+			//validar obligatoriedad del telefono (campo de texto)
+			var telefono=document.getElementById("tel");
+			var blancos=/^\s+$/;
+			if(telefono.value.length==0 || blancos.test(telefono.value)){
+                alert("El telefono es un campo obligatorio");
+                telefono.focus();
+                return;
+            }
+			//validar patrón telefono
+			var val1=/^6[1-2]\d{7}$/
+			if (val1.test(telefono.value)==false){
+				alert("No es correcto el télefono");
+				telefono.focus();
+                return;
+			}
+
+			//validar obligatoriedad del DNI (campo de texto)
+			var DNI=document.getElementById("dni");
+			var blancos=/^\s+$/;
+			if(DNI.value.length==0 || blancos.test(DNI.value)){
+                alert("El DNI es un campo obligatorio");
+                DNI.focus();
+                return;
+            }
+			//validar patrón DNI
+			var val2=/^\d{2,8}[A-Z]$/
+			if (val2.test(DNI.value)==false){
+				alert("No es correcto el DNI");
+				DNI.focus();
+                return;
+			}
+
+			//validar seleccionar un tipo de datos
+			var tip=0;
+            var lista=document.getElementsByName("dat");
+            for (i=0;i<lista.length;i++){       //array para recorrer uno a uno 
+                    if (lista[i].checked==true){    //si esta marcada la guardo en rango
+                        tip=Number(lista[i].value);
+                    }
+            }
+            if (tip==0){
+                alert("Seleciona el tipo de datos");
+                lista.focus();
+                return;
+            
+			}
+
+			//validar que se anote algo en el tipo tarifa(campo select)
+			var tarifa=document.getElementById("tar");
+            if (tarifa.value=="0"){
+                alert("Tarifa es un campo obligatorio");
+                tarifa.focus;
+                return;
+            }
+
+
+			//CALCULOS
+			var minutosf=document.getElementById("fijo").value;
+			var minutosm=document.getElementById("mov").value;
+			var preciominsf=0; 
+			var preciominsm=0;
+			if (tarifa.value=="25"){
+				preciominsf=0;
+			}
+			if(tarifa.value=="15" || tarifa.value=="20"){
+				preciominsf=0.05;
+			}
+			if (minutosm>100 && tarifa.value=="15"){
+				preciominsm=0.04;
+			}
+			
+			precio=Number(tarifa.value)+Number(minutosf)*Number(preciominsf)+Number(minutosm)*Number(preciominsm)+Number(tip);
+			//checked comprobación
+			ofertas=document.getElementById("oferta");
+            if (oferta.checked){
+                precio=precio-precio*0.1;
+            }
+
+			let resultado=document.getElementById("mostrar");
+			if (precio>50){
+				resultado.innerHTML="Lamar a atención al cliente. El precio total es"+precio+" €";
+			}
+			else{
+				resultado.innerHTML="El precio total es "+precio+" €";
+			}
+
+			
+
+	}
+	</script>
+
+	<div id="container">
+		<div id="cabecera">FACTURA TELEFONO</div>
+
+		<div id="contenido" class="borde">
+			<form id="form1" name="form1" method="post" action="">
+				<fieldset>
+					<legend>Datos factura</legend>
+					<br />
+					<p>telefono:<input type="text" size=9 id="tel"></p>
+					<p>dni:<input type="text" size=9 id="dni"></p>
+					<p>Tipo de tarifa:
+						<select name="tarifa" id="tar">
+							<option value="0">Anote tipo de tarifa</option>
+							<option value="15">Básica</option>
+							<option value="20">Amiga</option>
+							<option value="25">Plus</option>
+						</select></p>
+
+					<p>Minutos llamadas fijos:<input type="text" size=4 value="0" id="fijo"></p>
+					<p>Minutos llamadas móviles:<input type="text" size=4 value="0" id="mov"></p>
+
+					<p>Datos
+						<input type="radio" name="dat" value="5">5 GB
+						<input type="radio" name="dat" value="8">10 GB
+						<input type="radio" name="dat" value="10">Ilimitados
+					<p><input type="checkbox" id="oferta">Oferta promoción</p>
+				</fieldset>
+				<p><input type="button" value="Seguir" onclick="calculo()"/>
+					<input name="" type="reset"
+						value="Borrar"/></p>
+						<div id="mostrar" style="color: black;"></div>
+
+			</form>
+			
+		</div>
+
+		<div id="apDiv7">
+			
+			<p>Copyright salesianasnspilar 2022</p>
+			<p>&nbsp;</p>
+		</div>
+
+	</div>
+	
+</body>
+
+</html>

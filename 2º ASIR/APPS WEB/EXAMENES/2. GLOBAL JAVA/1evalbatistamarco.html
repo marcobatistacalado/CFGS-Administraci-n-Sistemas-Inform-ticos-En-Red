@@ -1,0 +1,305 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Marco Batista</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        #container {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 850px;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            box-shadow: 4px 4px 4px #666;
+            top: 20px;
+        }
+
+        #contenido {
+            margin: auto;
+            margin-top: 75px;
+            padding-left: 10%;
+            box-shadow: 2px 2px 2px 2px grey;
+            padding-bottom: 20px;
+        }
+
+        .borde {
+            width: 60%;
+            margin: auto;
+            border-radius: 20px;
+            background-color: white;
+            padding-left: 60px;
+        }
+
+        #apDiv7 {
+
+            height: 39px;
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+            padding-right: 10px;
+        }
+
+        #container #contenido #form1 p {
+            text-align: center;
+        }
+
+        #cabecera {
+            position: relative;
+            margin-top: 60px;
+
+            width: 500px;
+            height: 50px;
+            margin: auto;
+
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        input {
+            border-style: none;
+            border-bottom-style: solid;
+        }
+        span{
+            color: orange;
+        }
+        #resultado{
+            color: white;
+        }
+
+    </style>
+    <script>
+        //EJERCICIO 2 - campo no vacío y sin espacios (OBLIGATORIO) 
+        function hayValor(id) {
+            var RegExp = /^\s+$/;
+            var element = document.getElementById(id);
+            if (element.value.length == 0 || RegExp.test(element.value))
+                return false;
+            return true;
+        }
+        function validarUser(id) {
+            var RegExp = /^[A-Za-z]{2,3}-[1-9][0-9]{3}$/;
+            var element = document.getElementById(id);
+            //Si el valor no se ajusta al patrón, no es un telefono correcto
+            if (RegExp.test(element.value) == false)
+                return false;
+            return true;
+        }
+
+        function validar(){
+            error=false;
+            //obligatoriedad campo texto usuario
+            if (hayValor("user") == false) {
+                document.getElementById("errUser").innerHTML = "Campo Obligatorio";
+                error = true;
+            }else{ //validar con patrón el usuario
+                if (validarUser("user") == false) {
+                document.getElementById("errUser").innerHTML = "Usuario inválido";
+                error = true;
+                }
+            }
+            //obligatoriedad campo texto kilos
+            if (hayValor("kg") == false) {
+                document.getElementById("errKg").innerHTML = "Campo Obligatorio";
+                error = true;
+            }else{
+                kilogramos=Number(document.getElementById("kg").value)
+                //validar que sea numérico
+                if (isNaN(kilogramos)){
+                    document.getElementById("errKg").innerHTML = "Campo Numérico";
+                    error = true;
+			    }else{//tiene que estar entre 1-100
+                    if (kilogramos < 1 || kilogramos > 100){
+                        document.getElementById("errKg").innerHTML = "Campo comprendido 1-100";
+                        error = true;
+                    }
+                }
+            }
+            //obligatoriedad campo date fecha recogida
+            if (hayValor("f1") == false) {
+                document.getElementById("errF1").innerHTML = "Pon la fecha";
+                error = true;
+            }else{
+                fecha1=document.getElementById("f1").value;
+                datos=fecha1.split("-"); //tipo: 2022-11-08
+                fecha1=new Date(datos[0],datos[1]-1,datos[2]);
+                fechahoy=new Date()
+                if (fecha1.getTime()<fechahoy.getTime()){
+                document.getElementById("errF1").innerHTML = "Fecha incorrecta";
+                error = true;
+                }
+            }
+            //obligatoriedad campo radio
+            var ascensor = document.getElementsByName("asc");
+            var seleccion = 0;
+            for (i = 0; i < ascensor.length; i++) { //array para recorrer uno a uno 
+                if (ascensor[i].checked == true)   { 
+                    seleccion = ascensor[i].value;  //si esta marcada la guardo en rango
+                }
+                }
+            
+            if (seleccion == 0) {
+                document.getElementById("errAsc").innerHTML = "Selecciona un tipo de ascensor";
+                error = true;
+            }
+
+
+            //SI TODO BIEN CALCULAMOS
+            if (error == false) {
+                var precio=0
+                var destino=Number(document.getElementById("dest").value);//aqui ya sabemos que son numero pero por si acaso...
+                var precio=destino;
+                
+               
+                if (destino== 10){
+                    var sitio=Number(document.getElementById("zona").value);
+                    if (sitio==3){
+                        precio=precio+4;
+                    }
+                    if (sitio==2){
+                        precio=precio+6;
+                    }
+                }
+                if (kilogramos>5){
+                    var suple=Math.round(kilogramos*0.2);
+                    precio=precio+suple;
+                }
+
+                fecha2=(fecha1.getTime()-fechahoy.getTime())/(1000*60*60*24);
+                if (fecha2 <3){
+                    precio=precio+precio*0.2;
+                }
+                if (fecha2 >= 10 ){
+                    precio=precio-precio*0.4;
+                }
+                if (document.getElementById("frag").checked == true) {
+                    precio=precio+5
+                }
+
+                if (seleccion=="3" && kilogramos>50){
+                    document.getElementById("resultado").innerHTML = "Contacte con nosotros por teléfono";
+                }else{
+                    usuario=document.getElementById("user").value;
+                    document.getElementById("resultado").innerHTML = "Su identificador es: "+usuario+"<br>"+" y el Precio total: " + precio + " euros";
+                }
+                
+            }
+        }
+        
+
+
+        //EJERCICIO 1 - CAMBIO AL POSICIONAR RATÓN
+        numcamb=0
+        function cambiar(elemento){
+            switch(numcamb){
+                case 0:
+                        elemento.innerHTML = "ENTREGA INMEDIATA";
+                        elemento.style.backgroundColor="blue";
+                        elemento.style.color="white";
+                        numcamb ++;
+                break;
+                case 1: 
+                        elemento.innerHTML = "LÍDERES EN MADRID";
+                        elemento.style.backgroundColor="yellow";
+                        elemento.style.color="black";
+                        numcamb ++;
+                break;
+                case 2:
+                        elemento.innerHTML = "EMPRESA PAQUETERÍA";
+                        elemento.style.backgroundColor="transparent";
+                        elemento.style.color="black";
+                        numcamb=0;
+                break;
+            }
+        }
+        
+        //mostrar otra select
+        function mostrarsel(a) {
+            if (a.value=="10"){
+                document.getElementById("zona").style.display='inline';
+            }
+            else {
+                document.getElementById("zona").style.display='none';
+            }
+        }
+
+        //BORRAR ERRORES, EN CASO DE SER CAMBIADOS:
+        function borrar(num) {
+            switch (num) {
+                case 1: 
+                    document.getElementById("errUser").innerHTML = "";
+                    break;
+                case 2: 
+                    document.getElementById("errKg").innerHTML = "";
+                    break;
+                case 3: 
+                    document.getElementById("errF1").innerHTML = "";
+                    break;
+                case 4: 
+                    document.getElementById("errAsc").innerHTML = "";
+                    break;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="cabecera" onmouseover="cambiar(this)"><!--EJERCICIO 1-->
+            EMPRESA PAQUETERÍA
+        </div>
+
+        <div id="contenido" class="borde">
+            <form>
+                <br/>
+                <p>Identificador usuario:<input type="text" id="user" onfocus="borrar(1)" ></p>
+                <span id="errUser"></span>
+                <p>Destino:
+                    <select id="dest" onchange="mostrarsel(this)">
+                        <option value="10">Madrid</option>
+                        <option value="20">Segovia</option>
+                        <option value="15">Guadalajara</option>
+                    </select>
+                   <select id="zona">
+                    <option value="1">Norte</option>
+                    <option value="2">Sur</option>
+                    <option value="3">Centro</option>
+
+                   </select>
+
+                <p>Peso aproximado en kilogramos:<input type="text" size="3" id="kg" onfocus="borrar(2)"/></p>
+                <span id="errKg"></span>
+                <p>Fecha de recogida:<input type="date" id="f1" onfocus="borrar(3)"></p>
+                <span id="errF1"></span>
+                <p> <input type="radio" name="asc" value="1"onfocus="borrar(4)">Ascensor en origen y destino<br>
+                    <input type="radio" name="asc" value="2"onfocus="borrar(4)">Ascensor solo en origen o sólo en destino<br>
+                    <input type="radio" name="asc" value="3"onfocus="borrar(4)">No hay ascensor en origen ni en destino
+                </p>
+                <span id="errAsc"></span>
+                <p><input type="checkbox" id="frag">Frágil</p>
+                <br>
+                <p><input type="button" value="Calcular" onclick="validar()"></p>
+            </form>
+        </div>
+        <div id="apDiv7">
+            <p>Copyright salesianasnspilar 2022</p>
+            <p>&nbsp;</p>
+            <div id="resultado" style="text-align: center;height:20px"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

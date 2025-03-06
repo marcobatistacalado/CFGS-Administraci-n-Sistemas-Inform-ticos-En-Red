@@ -1,0 +1,31 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marco Batista</title>
+    <script>
+        function validar(){
+        var fecha_caja=document.getElementById("fecha").value; //08-11-2022
+        var datos=fecha_caja.split("-"); //array separando x '-'
+        var fechaFin= new Date (datos[0],datos[1]-1, datos[2]);
+        var dias=Number(document.getElementById("dias").value); 
+        fechaFin.setDate(fechaFin.getDate()+dias);
+        alert(fechaFin);
+        
+        alert("El dia va a ser: "+dia);
+        }
+    
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="date" id="fecha" >
+        <input type="number" id="dias">
+        <p><input type="button" value="ENVIAR" onclick="validar()"></p>
+    </form>
+
+</body>
+</html>

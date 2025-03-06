@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+    <script>
+    var a=1;
+    var par=0;
+    var impar=0;
+    
+    while(a<=5){
+        var num=parseInt(prompt("Introduce un numero: "));
+        var modulo=num % 2;
+        if (modulo==0) {
+        par=par+1;}
+        else
+        {impar=impar+1;}
+        a++;
+    }
+    document.write("Pares: "+par+"</br>")
+    document.write("Impares: "+impar)
+    </script>
+</body>
+</html>

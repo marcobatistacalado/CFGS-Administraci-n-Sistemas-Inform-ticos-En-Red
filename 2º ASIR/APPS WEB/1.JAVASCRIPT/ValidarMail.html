@@ -1,0 +1,23 @@
+<html >
+<head>
+<title></title>
+<script type="text/javascript">
+function validarMail() {
+	var RegEx =/[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+    var dato=document.getElementById('mail').value;
+    if (RegEx.test(dato)) {
+        alert('Mail correcto'); 
+    } else {
+        alert('Mail incorrecto');
+        document.form.pass.focus();
+    } 
+}
+</script>
+</head>
+<body>
+<form name="form">
+<p>Introduce un mail: <input type="text" id="mail">
+  <input name="button" type="button" value="Probar" onclick="validarMail();">  <br>
+  </form>
+</body>
+</html>  

@@ -1,0 +1,203 @@
+<html>
+<head>
+	<style type="text/css">
+		.error {
+			visibility: hidden;
+			color: red;
+			white-space: pre;
+		}
+
+		#cabecera {
+			width: 450px;
+			margin: auto;
+			text-align: center;
+			background-color: #FFFFFF;
+			height: 100px;
+			padding: 20px;
+		}
+
+		#resultado {
+			width: 450px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			background-color: #FFFFFF;
+			padding: 10px;
+			text-align: center;
+		}
+
+		#central {
+			width: 500px;
+			margin: auto;
+			height: 500px;
+			padding: 20px;
+		}
+
+		body {
+			background-color: #9999FF;
+			color: #000066;
+		}
+
+		a {
+			color: white;
+		}
+
+	</style>
+	<script>
+		function total(){
+            //validación usuario
+            var validar1=/^[A-Z]\w{4,7}$/i; // \w equivale a [a-zA-Z0-9_] 
+            var usuario=document.getElementById("usu"); //cogemos dato por id, pero lo anotado va a estar en el value
+            if (validar1.test(usuario.value)==false){   //aqui agregamos que sea el value y lo pasamos por la validación
+                alert("Usuario no válido");
+                usuario.focus; //para que se coloque en la casilla que debe rellenar bien
+                return;
+            }
+
+            var dest=document.getElementById("destino");
+            if (dest.value==""){
+                alert("Destino es un campo obligatorio");
+                dest.focus;
+                return;
+            }
+
+            var mes=document.getElementById("mes");
+            mesNum=Number(mes.value); //SIEMPRE CREAR UNA VARIABLE PARA VALUE
+            if (isNaN(mesNum)){ //validar que sea correcto: nos dice que no se ha introducido un número
+                alert("El mes tiene que ser numérico");
+                mes.focus();
+                return;
+            }
+            if (mesNum >12 || mesNum<1){  //validación que sea un mes entre 1 y 12
+                alert("Mes entre 1 y 12");
+                mes.focus();
+                return;
+            }
+
+            //validar que no se hayan introducido espacios en blanco
+            var blancos=/^\s+$/; // \s es esoacios en blanco, asi que le dices que empiece y que acabe para que sea uno o muchos
+            var semanas=document.getElementById("sem");
+            //validar que semanas sea un campo obligatorio
+            if(semanas.value.length==0 || blancos.test(semanas.value)){
+                alert("Semanas es campo obligatorio");
+                semanas.focus();
+                return;
+            }
+            //SIEMPRE CREAR OTRA VARIABLE PARA VALUE????
+            var semNum=Number(semanas.value);
+            //validamos que sea un número
+            if(isNaN(semNum)){
+                alert("Semanas tiene que ser numérico");
+                semanas.focus();
+                return;
+            }
+            //validar que este entre 1 y 7
+            if (semNum>8 || semNum<2){
+                alert("Semanas tiene que estar entre 2-8");
+                semanas.focus();
+                return;
+            }
+
+            //como en value no ha puesto los precios directamente pues hacemos un switch
+            switch(dest.value){
+                case "Londres":
+                    precio=200;
+                    break;
+                case "Dublin":
+                    precio=300;
+                    break;
+                case "Nueva York":
+                    precio=750;
+                    break;
+            }
+        
+
+            var aloja=-1; //como tenemos un valor 0 ponemos -1 por si no han seleccionado alojamiento
+            var lista=document.getElementsByName("tipo");
+
+            for (i=0;i<lista.length;i++){       //array para recorrer uno a uno 
+                    if (lista[i].checked==true){    //si esta marcada la guardo en rango
+                        aloja=Number(lista[i].value);
+                    }
+            }
+            //comprobar que se ha seleccionado el alojamiento
+            if (aloja==-1){
+                alert("Seleciona el alojamiento");
+                lista.focus();
+                return;
+            }
+
+            //por ultimo calculamos el precio final sin descuentos
+            precio=precio+aloja*semNum;
+            incremento=0;
+            if(mesNum==7 || mesNum==8){
+				if (dest.value=="Londres"){
+					incremento=0.2;
+                }
+				if (dest.value=="Dublin"){
+					incremento=0.1;
+                }
+				precio=precio+precio*incremento;
+			}
+			if (mesNum==1 && destino.value=="Nueva York"){
+				precio=precio-precio*0.10;
+            }
+			
+            ant=document.getElementById("antiguo");
+            if (ant.checked){
+                precio=precio-100;
+            }
+			let resultado=document.getElementById("resultado");
+			resultado.innerHTML="El precio de " + semNum + " semanas en " + dest.value + ": " + precio + " euros";
+        
+        
+        }
+	</script>
+</head>
+
+<body>
+
+	<div id="cabecera">
+		<img src="empresa.png" style="width:200px;height:100px;text-align:left" hspace="20" id="imagencabecera">
+		<p>LONDRES</p>
+		<p>DUBLIN</p>
+		<p>NEW YORK</p>
+	</div>
+	<div id="central">
+		<form>
+			<br>
+			<fieldset id="campos">
+				<legend>Rellena este formulario</legend>
+				<p>Clave de usuario:<input type="password" id="usu"></p>
+				<p>Elige destino:
+					<select id="destino" >
+						<option value="">Elige una opcion</option>
+						<option value="Londres">Londres</option>
+						<option value="Dublin">Dublin</option>
+						<option value="Nueva York">Nueva York</option>
+					</select>
+					<p>
+						<p>Mes de salida:<input type="text" id="mes"></p>
+						<p>Semanas:<input type="text" id="sem"></p>
+						<p>
+							Alojamiento:<br>
+							<input type="radio" value="100" name="tipo">familia<br>
+							<input type="radio" value="200" name="tipo">apartamento compartido<br>
+							<input type="radio" value="0" name="tipo">por mi cuenta
+						</p>
+
+
+
+						<p><input type="checkbox" id="antiguo">Soy antiguo cliente</p>
+
+						<p style="text-align: center;">
+							<input type="button" value="Informacion" onclick="total()">
+						</p>
+			</fieldset>
+		</form>
+	</div>
+	<div id="resultado">
+	</div>
+</body>
+
+</html>

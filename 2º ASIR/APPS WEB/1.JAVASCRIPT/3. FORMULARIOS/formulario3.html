@@ -1,0 +1,48 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+    <script>
+        function validar(){
+            let processor=document.getElementById("procesador").value;
+            let display=document.getElementById("monitor").value;
+            let harddisk=document.getElementById("discoduro").value;
+            let presupuesto= Number(processor)+Number(display)+Number(harddisk);
+
+            document.getElementById("preciofinal").value=presupuesto;
+            //cuando usamos un input de texto
+            
+        }
+        
+    </script>
+    <form name="miformulario">
+
+        <p>Procesador:
+        <select id="procesador">
+            <option value="200">Core2Duo</option>
+            <option value="300">Core i7</option>
+        </select>
+        </p>
+        <p>Monitor:
+        <select id="monitor">
+            <option value="250">Samsung 14'</option>
+            <option value="350">Samsung 15'</option>
+            <option value="550">Samsung 17'</option>
+        </select>
+        </p>
+        <p>Disco duro:
+        <select id="discoduro">
+            <option value="300">1TB</option>
+            <option value="440">2TB</option>
+            <option value="500">2.5TB</option>
+            </select>
+            </p>
+        
+        <p><input type="button" value="CALCULAR" onclick="validar()"></p>
+        <p>Precio a pagar:  <input type="text" id="preciofinal" readonly></p>
+    </form>
+
+ 
+</body>
+</html>

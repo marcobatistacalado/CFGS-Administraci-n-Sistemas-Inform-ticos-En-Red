@@ -1,0 +1,99 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+    <script>
+        function validar(){
+            //coger dato del form
+            let minombre=document.getElementById("name").value;
+            //if comprobar longitud
+            if (minombre.length==0){
+                alert("No has anotado el nombre");
+                document.getElementById("nombre").focus();
+                return;
+            }
+
+            //coger dato del form
+            let apellido=document.getElementById("surname").value;
+            //if comprobar longitud
+            if (apellido.length==0){
+                alert("No has anotado el apellido");
+                document.getElementById("ape").focus(); //posicionarse despues de la alerta
+                return;
+            }
+
+            //coger dato del form
+            let telefono=document.getElementById("num").value;
+            //if comprobar que han entrado un campo
+            if (apellido.length==0){
+                alert("No has anotado el telefono");
+                document.getElementById("ape").focus();
+                return;
+            }
+            //if comprobnar longitud 9
+            if (telefono.length!=9){
+                alert("Longitud incorrecta del telefono");
+                document.getElementById("num").focus();
+                return;
+            }
+            //if comprobar que no son letras
+            if (isNaN(Number(telefono))){
+                alert("No has anotado números en el telefono");
+                document.getElementById("num").focus();
+                return;
+            }
+
+            //coger dato del form
+            let codigo=document.getElementById("codpost").value;
+            if (codigo.length==0){
+                alert("No has anotado el codigo");
+                document.getElementById("codpost").focus();
+                return;
+            }
+            if (codigo.length!=5){
+                alert("Longitud incorrecta del codigo");
+                document.getElementById("codpost").focus();
+                return;
+            }
+            if (isNaN(Number(codigo))){
+                alert("No has anotado números en el codigo");
+                document.getElementById("codpost").focus();
+                return;
+            }
+            //comprobar que empieza por 28
+            if (Number(codigo.substr(0,2) != 28)){
+                alert("El codigo no empieza por 28")
+                document.getElementById("codpost").focus();
+                return;
+            }
+
+            let ocupacion= document.getElementById("ocup").value;
+            document.getElementById("descuentazo").innerHTML="Tienes un descuento de "+ocupacion+"%";
+
+        
+            document.getElementById("resultado").innerHTML="Gracias por rellenar tus datos";
+            //solo si está todo bien te lo muestra ya que abajo hemos puesto una caja
+        }
+        
+    </script>
+    <form name="miformulario">
+        <p>Nombre: <input type="text" name="nombre" id="name"></p>
+        <p>Apellidos: <input type="text" name="apellido" id="surname"></p>
+        <p>Numero: <input type="text" name="numero" id="num"></p>
+        <p>Código postal: <input type="text" name="postal" id="codpost"></p>
+        <p>Ocupación
+            <select id="ocup">
+                <option value="20">Estudiante</option>
+                <option value="15">Trabajador</option>
+                <option value="30">Ambos</option>
+            </select>
+        </p>
+        <p><input type="button" value="REGISTRAR" onclick="validar()"></p>
+
+    </form>
+    <div id="descuentazo"></div>
+    <div id="resultado"></div>
+ 
+</body>
+</html>

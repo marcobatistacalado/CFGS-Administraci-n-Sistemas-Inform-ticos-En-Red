@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcular(){
+        fecha1=document.getElementById("fecha1").value;
+        datos=fecha1.split("-"); //2022-11-08
+        fecha1=new Date(datos[0],datos[1]-1,datos[2]);
+        
+       
+        fecha2=document.getElementById("fecha2").value;
+        datos=fecha2.split("-"); //2022-11-08
+        fecha2=new Date(datos[0],datos[1]-1,datos[2]);
+       
+        fecha3=document.getElementById("fecha3").value;
+        datos=fecha3.split("-"); //2022-11-08
+        fecha3=new Date(datos[0],datos[1]-1,datos[2]);
+       
+        if (fecha1.getTime()<=fecha3.getTime() && fecha3.getTime()<=fecha2.getTime())
+            alert("Está entre media");
+        else
+            alert("No está entre ambas");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Fecha:<input type="date" id="fecha1">
+        Fecha:<input type="date" id="fecha2">
+        Fecha:<input type="date" id="fecha3">
+        <input type="button" value="calcula" onclick="calcular()">
+    </form>
+</body>
+</html>

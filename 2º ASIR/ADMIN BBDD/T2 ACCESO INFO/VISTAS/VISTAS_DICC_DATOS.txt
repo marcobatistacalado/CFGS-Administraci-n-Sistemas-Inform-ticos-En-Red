@@ -1,0 +1,29 @@
+desc all_tables; /*saber si tiene o no el campo owner*/
+desc user_tables; /*aqui no sale el owner pq es el propio q lo esta ejecutando*/
+
+/*SYSTEM*/  
+  SELECT (*)
+    FROM USER_TABLES; /*CUANTAS SON SUS TABLAS PROPIAS*/
+
+  SELECT (*)
+    FROM ALL_TABLES; /*CUANTAS A LAS QUE TIENE ACCESO*/
+    
+    /*TAMBN SE PUEDE VER LAS PROPIAS (COMO USER_TABLES)º   HACIENDO:*/
+    SELECT (*)
+      FROM ALL_TABLES
+        WHERE OWNER='SYSTEM';
+  
+  /*SABER QUE CAMPOS TIENE ALL_TABLES*/
+    DESC ALL_TABLES;
+    
+  SELECT (*)
+    FROM DBA_TABLES; /*TABLAS DEL SISTEMA*/
+
+/*USUASIR*/
+  SELECT (*)
+    FROM DBA_TABLES; /*NO TE VA A DEJAR HACERLO*/
+    
+
+SELECT OBJECT_NAME
+  FROM USER_OBJECTS
+    WHERE OBJECT_TYPE = 'PROCEDURE';

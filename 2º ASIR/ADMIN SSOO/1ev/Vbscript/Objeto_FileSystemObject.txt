@@ -1,0 +1,87 @@
+FileSystemObject -> objeto para el manejo del sistema de ficheros
+Creación:
+ dim fso
+ set fso=WScript.CreateObject("Scripting.FileSystemObject")
+
+Propiedades
+ drives -> lista de todas las unidades
+
+Métodos
+ driveexists(drv) -> comprueba si existe una unidad
+ getdrive(nombre) -> devuelve una unidad (objeto Drive)
+ folderexists(fld) -> comprueba si existe una carpeta
+ getfolder(nombre) -> devuelve una carpeta (objeto Folder)
+ fileexists(file) -> comprueba si existe un fichero
+ getfile(nombre) -> devuelve un fichero (objeto File)
+ getfileversion(file) -> ??
+ copyfile -> copiar fichero
+ movefile -> mover fichero
+ deletefile -> borrar fichero
+ getbasename(file) -> nombre de fichero sin extensión
+ getextensionname(file) -> extensión del fichero
+ getfilename(file) -> nombre del fichero
+ buildpath(ruta,file) -> construye una ruta completa
+
+Objeto Drive
+isready -> si esta lista la unidad
+drivetype: -> tipo de unidad (devuelve un numero)
+ 0 desconocido
+ 1 unidad extraible
+ 2 unidad fija
+ 3 unidad real
+ 4 cdrom
+ 5 disco virtual
+filesystem -> tipo del sistema de ficheros
+volumenname -> nombre de volumen
+sharename -> nombre de recurso compartido
+path -> ruta
+rootfolder -> ruta del directorio raíz
+totalsize -> tamaño total
+freespace -> espacio libre
+availablespace -> espacio disponible (no siempre coincide con el espacio libre)
+serialnumber -> número de serie
+driveletter -> letra de unidad
+
+Objeto Folder
+name -> nombre del directorio
+drive -> unidad del directorio
+type -> tipo de carpeta
+datecreated -> fecha de creación
+datelastmodified -> fecha de última modificación
+datelastaccessed -> fecha de último acceso
+parentfolder -> directorio padre
+isrootfolder -> comprueba si es el directorio raíz de la unidad
+size -> tamaño
+path -> ruta
+sortpath -> ruta corta (nomenclatura 8.3)
+sortname -> nombre corto (nomenclatura 8.3)
+subfolders -> lista de subdirectorios
+files -> lista de los ficheros que contiene
+copy -> copiar carpeta
+delete -> borrar carpeta
+
+Objeto File
+name -> nombre del fichero
+drive -> unidad del fichero
+type -> tipo de fichero
+datecreated -> fecha de creación
+datelastmodified -> fecha de última modificación
+datelastaccessed -> fecha de último acceso
+parentfolder -> directorio padre
+path -> ruta
+size -> tamaño
+shortname -> nombre corto (nomenclatura 8.3)
+shortpath -> ruta corta (nomenclatura 8.3)
+attributes: -> atributos (devuelve la suma de los valores que tiene)
+ 0 normal
+ 1 sólo lectura
+ 2 oculto
+ 4 sistema
+ 8 etiqueta de volumen
+16 carpeta
+32 archivo
+64 alias
+128 comprimido
+copy -> copiar fichero
+move -> mover fichero
+delete -> borrar fichero

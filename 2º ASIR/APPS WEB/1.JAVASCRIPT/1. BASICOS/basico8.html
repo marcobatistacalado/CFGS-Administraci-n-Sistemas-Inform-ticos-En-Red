@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+<p>soy genial</p>
+<script>
+var sueldo=Number(prompt("Sueldo: ")); /*parseFloat o Number para numeros con decimal*/
+var antiguedad=Number(prompt("Años de antiguedad: "));
+
+if (sueldo<500 && antiguedad>=10)
+    document.write("Tienes un aumento del 20%");
+    var aumento=sueldo+(sueldo*20)/100; 
+    document.write("Tu sueldo se queda en: "+aumento);
+else{
+    if (sueldo<500 && antiguedad<10)
+        document.write("Tienes un aumento del 5%");
+        var aumento=sueldo+(sueldo*5)/100;
+        document.write("Tu sueldo se queda en: "+aumento);
+    else{
+        if (sueldo>=500)
+    document.write("Sin cambios");
+    }
+} 
+
+       
+</script>
+</body>
+</html>

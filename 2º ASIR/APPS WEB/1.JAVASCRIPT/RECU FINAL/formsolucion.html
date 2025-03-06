@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style type="text/css">
+        body {
+            background-color: blue;
+        }
+        
+        @font-face {
+            font-family: nieve;
+            src: url(amsterdam.ttf);
+        }
+        
+        fieldset {
+            background-image: url(sombra.jpg);
+            width: 450px;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 1);
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        #container {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 850px;
+            padding-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            height: 700px;        
+            position: relative;
+            box-shadow: 4px 4px 4px #666;
+            top: 20px;
+        }
+        
+        #apDiv2 {
+            text-align: center;
+            height: 81px;
+            z-index: 2;
+            left: 150px;
+            top: 27px;
+            font-family: nieve;
+        }
+        
+        #contenido {
+           position: absolute;
+            width: 563px;
+            left: 145px;
+            top: 180px;
+            height: 450px;
+            height: auto;
+        }
+        
+        .borde {
+            border-radius: 20px;
+            background-color: #EEE;
+        }
+        
+        .titulo {
+            font-size: 100px;
+            color: #09F;
+            text-shadow: 2px 2px 2px #000066;
+        }
+        
+        #container #menu {
+            position: absolute;
+            left: 235px;
+            top: 174px;
+        }
+        
+        #apDiv7 {
+            position: absolute;
+            width: 230px;
+            height: 39px;
+            z-index: 1;
+            left: 589px;
+            top: 654px;
+            font-style: italic;
+        }
+        
+        #container #contenido #form1 p {
+            text-align: center;
+        }
+        
+        #cabecera {
+            background-image: url(poli1.jfif);
+            background-repeat: no-repeat;
+            background-size: 550px 200px;
+            background-position: top center;
+            background-attachment: fixed;
+            height: 250px;
+        }
+        /*COLOR DEL SPAN*/
+        span {
+            color: red;
+        }
+        /*Corrección faltaba no mostrar el elemento al empezar */
+        #pcubierta{
+            display:none;
+        }
+    </style>
+    <script>
+        //campo no vacío y sin espacios (OBLIGATORIO)
+        function hayValor(id) {
+            var RegExp = /^\s+$/;
+            var element = document.getElementById(id);
+            if (element.value.length == 0 || RegExp.test(element.value))
+                return false;
+            return true;
+        }
+
+        function validarTel(id) {
+            var RegExp = /^[6]?[9]?\d{8}$/;
+            var element = document.getElementById(id);
+            //Si el valor no se ajusta al patrón, no es un telefono correcto
+            if (RegExp.test(element.value) == false)
+                return false;
+            return true;
+        }
+
+        function validarHora(id) {
+            var RegExp = /^\d{1,2}$/;
+            var element = document.getElementById(id);
+            //Si el valor no se ajusta al patrón, no es un telefono correcto
+            if (RegExp.test(element.value) == false)
+                return false;
+            return true;
+        }
+    
+        //PARA QUE NO SALGA TODO EL RATO EL OBJETO A APARECER HAY Q PONERLO EN EL STYLE CON DISPLAY NONE
+        function mostrarcheck(a) {
+            if (a.value=="12" || a.value=="8"){
+                document.getElementById("pcubierta").style.display='inline';
+            }
+            else {
+                document.getElementById("pcubierta").style.display='none';
+            }
+        }
+        
+        //BORRAR ERRORES, EN CASO DE SER CAMBIADOS:
+        function borrar(num) {
+            switch (num) {
+                case 1: //Borrar error del telefono
+                    document.getElementById("errTel").innerHTML = "";
+                    break;
+                case 2: //Borrar error fecha
+                    document.getElementById("errFecha").innerHTML = "";
+                    break;
+                case 3: //Borrar error hora inicio
+                    document.getElementById("errInicio").innerHTML = "";
+                    break;
+                case 4: //Borrar error hora fin
+                    document.getElementById("errFin").innerHTML = "";
+                    break;
+                case 5: //Borrar error forma de pago
+                    document.getElementById("errLereles").innerHTML = "";
+                    break;
+                    //corrección He añadido el caso 6
+                case 6: //Borrar error forma de pago
+                    document.getElementById("errPista").innerHTML = "";
+                    break;
+            }
+        }
+
+
+
+        //------------------------------------------------------------
+        function validar(){
+            //corrección, inicializamos aquí error a false
+            error=false;
+            //OBLIGATORIEDAD CAMPO DE TEXTO
+            if (hayValor("tel") == false) {
+                document.getElementById("errTel").innerHTML = "Pon tu telefono";
+                error = true;
+            }
+            else{
+                //ES CORRECTO, COMPROBAMOS LA FUNCION DE VALIDAR TELEFONO
+                if (validarTel("tel") == false) {
+                document.getElementById("errTel").innerHTML = "Telefono empieza por 6 o 9 y tiene 9 numeros";
+                error = true;
+            }
+            }
+            //OBLIGATORIEDAD FECHA
+            if (hayValor("fecha") == false) {
+                document.getElementById("errFecha").innerHTML = "Pon la fecha";
+                error = true;
+            }else{//validar qie la fecha sea igual o mayor que el dia TYPE DATE
+                fecha1=document.getElementById("fecha").value;
+                datos=fecha1.split("-"); //2022-11-08
+                fecha1=new Date(datos[0],datos[1]-1,datos[2]);
+                fechahoy=new Date()
+                if (fecha1.getFullYear() < fechahoy.getFullYear()){
+                    document.getElementById("errFecha").innerHTML = "Año anterior al actual";
+                    error = true;
+                }
+                else{
+                    if (fecha1.getMonth() < fechahoy.getMonth()){
+                    document.getElementById("errFecha").innerHTML = "Mes anterior al actual";
+                    error = true;
+                    }
+                    else{
+                        if (fecha1.getDate() < fechahoy.getDate()){
+                        document.getElementById("errFecha").innerHTML = "Dia anterior al actual";
+                        error = true;
+                        }
+                        else{//mirar que maximo 7 dias mas
+                            resta=fecha1.getDate()-fechahoy.getDate();
+                            if (resta > 7){
+                                document.getElementById("errFecha").innerHTML = "No puedes reservar mas haya de 7 dias";
+                                error = true;
+                            }
+                        }
+                    }
+                }   
+            }
+            
+
+            //OBLIGATORIEDAD CAMPO DE TEXTO
+            if (hayValor("inicio") == false) {
+                document.getElementById("errInicio").innerHTML = "Pon la hora de inicio";
+                error = true;
+            }
+            //todo bien continuamos
+            else{ //PASAMOS FUNCION PARA COMPROBAR QUE LA HORA ESTE BIEN
+                if (validarHora("inicio") == false) {
+                document.getElementById("errInicio").innerHTML = "La hora no es la correcta";
+                error = true;}
+                //--------------------------NO FUNCIONA-------------------------------------
+                else{//si todo fue bien ponemos la condicion de entre las 9 y 21
+                    //corrección: quitamos let porque sino la variable después de la llave no existe
+                    //let horainicio=document.getElementById("inicio").value;
+                    horainicio=document.getElementById("inicio").value;
+                    //corrección era || en lugar de &&
+                    if (horainicio < 9 || horainicio > 21){
+                        document.getElementById("errInicio").innerHTML = "Tiene que ser hora entre 9 y 21";
+                        error = true;}
+                    }
+                }//---------------------------------------------------------------------------
+
+
+            //OBLIGATORIEDAD CAMPO DE TEXTO
+            if (hayValor("fin") == false) {
+                document.getElementById("errFin").innerHTML = "Pon la hora de fin";
+                error = true;
+            }
+            //todo bien continuamos
+            else{ //PASAMOS FUNCION PARA COMPROBAR QUE LA HORA ESTE BIEN
+                if (validarHora("fin") == false) {
+                document.getElementById("errFin").innerHTML = "La hora no es la correcta";
+                error = true;}
+                //--------------------------NO FUNCIONA-------------------------------------
+                else{//si todo fue bien ponemos la condicion de que sea mayor la hora de fin
+                    let horafin=document.getElementById("fin").value;
+                    //corrección <= en lugar de <
+                    if (horafin <= horainicio){
+                        document.getElementById("errFin").innerHTML = "Tiene que ser mayor que la hora de inicio";
+                        error = true;}
+                    else{//si todo bn que este entre las 10 y las 22
+                        //corrección || en lugar de &&
+                        if (horafin < 10 || horafin > 22){
+                        document.getElementById("errFin").innerHTML = "Tiene que ser entre las 10 y las 22";
+                        error = true;}
+                        else{
+                            let resta=horafin-horainicio
+                            //corrección 
+                            //if ( resta != 2 ){
+                            if ( resta > 2 ){
+                                document.getElementById("errFin").innerHTML = "Máximo 2 horas";
+                                error = true;}
+                            }
+                        }
+                    }
+                    
+                    
+                }//---------------------------------------------------------------------------
+            
+            //OBLIGATORIEDAD SELECT
+            let sitio=document.getElementById("tipo");
+            if (sitio.value==""){
+                document.getElementById("errPista").innerHTML = "Selecciona un tipo de pista";
+                error = true;
+            }
+            //OBLIGATORIEDAD RADIO
+            let pago = document.getElementsByName("lereles");
+            let seleccion = 0;
+            for (i = 0; i < pago.length; i++) { //array para recorrer uno a uno 
+                if (pago[i].checked == true)    
+                    seleccion = pago[i].value;  //si esta marcada la guardo en rango
+            }
+            if (seleccion == 0) {
+                document.getElementById("errLereles").innerHTML = "Selecciona un tipo de pago";
+                error = true;
+            }
+
+
+
+            //RESULTADO FINAL -----------------NO FUNCIONA TAMPOCO------------------
+            if (error == false) {
+                let precio = parseInt(sitio.value);//si esta checkeado aumentamos 4€
+                //corrección: este campo no existe si se ha seleccionado futbito
+                //añado el if porque si no daría error.
+                if (sitio.value==12 || sitio.value==8)
+                    if (document.getElementById("mostrar").checked == true){
+                        precio=precio+4;
+                }
+                //incrementos por el RADIO
+                //corrección 
+                //if (seleccion=1){
+                if (seleccion==1){
+                    precio=precio+precio*0.1;
+                }
+                //correción futbito
+                //if (seleccion=2){
+                if (seleccion==2){
+                    precio=precio+precio*0.05;
+                }
+                //MOSTRAR DIV EL RESULTADO
+              
+                document.getElementById("resultado").innerHTML = "Precio total:" + precio + " euros";
+            }
+        }
+       
+        //CAMBIAR FONDO TODO EL RATO CUANDO CLICKAS
+        numcamb=0
+        function cambia(elemento){
+            switch(numcamb){
+                case 0: elemento.style.backgroundImage= "url('poli1.jfif')";
+                        numcamb ++;
+                break;
+                case 1: elemento.style.backgroundImage= "url('poli2.jfif')";
+                        numcamb ++;
+                break;
+                case 2: elemento.style.backgroundImage= "url('poli3.jfif')";
+                        numcamb=0;
+                break;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="cabecera" onclick="cambia(this)">
+
+            <div class="titulo" id="apDiv2">Polideportivos</div>
+
+        </div>
+
+        <div id="contenido" class="borde">
+            <form id="form1" name="form1" method="post" action="">
+                <fieldset>
+                    <legend>Reserva</legend>
+                    <br/>
+                    <p>telefono:<input type="text" id="tel" onfocus="borrar(1)"></p>
+                    <span id="errTel"></span>
+                    <p>fecha:<input type="date" id="fecha" onfocus="borrar(2)"></p>
+                    <span id="errFecha"></span>
+                    <!-- corrección faltaba borrar el error-->
+                    <p>Tipo de pista:<select id="tipo" onchange="mostrarcheck(this)" onfocus="borrar(6)">
+                            <option value="">Anote tipo de pista</option>
+							<option value="10">Futbito</option>
+							<option value="12">Baloncesto</option>
+							<option value="8">Patinaje</option>
+							</select></p><span id="errPista"></span>
+                            <!-- Oculto todo el párrafo-->
+                           <p id="pcubierta">Cubierta <input type="checkbox" id="mostrar" size="5" maxlength="5">
+
+                    <p>Hora inicio:<input type="text" id="inicio"onfocus="borrar(3)"></p>
+                    <span id="errInicio"></span>
+                    <p>Hora fin:<input type="text" id="fin" onfocus="borrar(4)"></p>
+                    <span id="errFin"></span>
+
+                    <p><input type="radio" name="lereles" onchange="borrar(5)" value="1">Tarjeta
+                        <input type="radio" name="lereles" onchange="borrar(5)" value="2">Paypal
+                        <input type="radio" name="lereles" onchange="borrar(5)" value="3">Efectivo</p>
+                        <span id="errLereles"></span>
+                    </fieldset>
+                <p><input name="" type="button" value="Seguir" onclick="validar(this)"/><input name="" type="reset" value="Borrar" /></p>
+            </form>
+            <div id="resultado" style="text-align: center;height:20px"></div>
+        </div>
+       
+        <div id="apDiv7">
+            <p>Copyright salesianasnspilar 2021</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+   
+
+</body>
+
+</html>

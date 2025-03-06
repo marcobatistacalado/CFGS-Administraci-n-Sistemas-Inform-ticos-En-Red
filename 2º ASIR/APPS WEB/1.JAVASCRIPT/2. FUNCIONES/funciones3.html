@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+    <script>
+        function orden(num1,num2,num3){
+            if (num1>num2 && num1>num2){
+                document.write("El numero mayor es: "+num1+"</br>");
+                if (num2>num3){
+                    document.write("El numero medio es: "+num2+"</br>");
+                    document.write("El numero menor es: "+num3+"</br>");}
+                else{
+                    document.write("El numero medio es: "+num3+"</br>");
+                    document.write("El numero menor es: "+num2+"</br>");}
+            }
+            if (num2>num1 && num2>num3){
+                document.write("El numero mayor es: "+num2+"</br>");
+                if (num1>num3){
+                    document.write("El numero medio es: "+num1+"</br>");
+                    document.write("El numero menor es: "+num3+"</br>");}
+                else{
+                    document.write("El numero medio es: "+num3+"</br>");
+                    document.write("El numero menor es: "+num1+"</br>");}
+            }
+            if (num3>num1 && num3>num2){
+                document.write("El numero mayor es: "+num3+"</br>");
+                if (num1>num2){
+                    document.write("El numero medio es: "+num1+"</br>");
+                    document.write("El numero menor es: "+num2+"</br>");}
+                else{
+                    document.write("El numero medio es: "+num2+"</br>");
+                    document.write("El numero menor es: "+num1+"</br>");}
+            }
+            return;
+        }
+    </script>
+    <script>
+        var uno=Number(prompt("Introduce un numero: "));
+        var dos=Number(prompt("Introduce un numero: "));
+        var tres=Number(prompt("Introduce un numero: "));
+        var resultado=orden(uno,dos,tres);
+    </script>
+</body>
+</html>

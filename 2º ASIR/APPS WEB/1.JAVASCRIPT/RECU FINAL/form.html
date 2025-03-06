@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style type="text/css">
+        body {
+            background-color: blue;
+        }
+        
+        @font-face {
+            font-family: nieve;
+            src: url(amsterdam.ttf);
+        }
+        
+        fieldset {
+            background-image: url(sombra.jpg);
+            width: 450px;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 1);
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        #container {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 850px;
+            padding-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            height: 700px;
+            position: relative;
+            box-shadow: 4px 4px 4px #666;
+            top: 20px;
+        }
+        
+        #apDiv2 {
+            text-align: center;
+            height: 81px;
+            z-index: 2;
+            left: 150px;
+            top: 27px;
+            font-family: nieve;
+        }
+        
+        #contenido {
+            position: absolute;
+            width: 563px;
+            left: 145px;
+            top: 180px;
+            height: 450px;
+        }
+        
+        .borde {
+            border-radius: 20px;
+            background-color: #EEE;
+        }
+        
+        .titulo {
+            font-size: 100px;
+            color: #09F;
+            text-shadow: 2px 2px 2px #000066;
+        }
+        
+        #container #menu {
+            position: absolute;
+            left: 235px;
+            top: 174px;
+        }
+        
+        #apDiv7 {
+            position: absolute;
+            width: 230px;
+            height: 39px;
+            z-index: 1;
+            left: 589px;
+            top: 654px;
+            font-style: italic;
+        }
+        
+        #container #contenido #form1 p {
+            text-align: center;
+        }
+        
+        #cabecera {
+            background-image: url(poli1.jfif);
+            background-repeat: no-repeat;
+            background-size: 550px 200px;
+            background-position: top center;
+            background-attachment: fixed;
+            height: 250px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="cabecera" onclick="cambia(this)">
+
+            <div class="titulo" id="apDiv2">Polideportivos</div>
+
+        </div>
+
+        <div id="contenido" class="borde">
+            <form id="form1" name="form1" method="post" action="">
+                <fieldset>
+                    <legend>Reserva</legend>
+                    <br/>
+                    <p>telefono:<input type="text"></p>
+                    <p>fecha:<input type="date"></p>
+                    <p>Tipo de pista:<select><option>Anote tipo de pista</option>
+							<option>Futbito</option>
+							<option>Baloncesto</option>
+							<option>Patinaje</option>
+							</select></p>
+
+                    <p>Hora inicio:<input type="text"></p>
+                    <p>Hora fin:<input type="text"></p>
+
+                    <p><input type="radio">Tarjeta
+                        <input type="radio">Paypal
+                        <input type="radio">Efectivo</p>
+                </fieldset>
+                <p><input name="" type="button" value="Seguir" /><input name="" type="reset" value="Borrar" /></p>
+            </form>
+        </div>
+        <div id="apDiv7">
+            <p>Copyright salesianasnspilar 2021</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

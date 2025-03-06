@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title> PROBANDO JAVASCRIPT </title>
+</head>
+
+<body>
+
+    <script>
+        function fecha(a,b,c) {
+            if (a >= 1 && a <= 31) {
+                switch (b) {
+                    case 1:
+                        b = "Enero";
+                        break;
+                    case 2:
+                        b = "Febrero";
+                        break;
+                    case 3:
+                        b = "Marzo";
+                        break;
+                    case 4:
+                        b = "Abril";
+                        break;
+                    case 5:
+                        b = "Mayo";
+                        break;
+                    case 6:
+                        b = "Junio";
+                        break;
+                    case 7:
+                        b = "Julio";
+                        break;
+                    case 8:
+                        b = "Agosto";
+                        break;
+                    case 9:
+                        b = "Septiembre";
+                        break;
+                    case 10:
+                        b = "Octubre";
+                        break;
+                    case 11:
+                        b = "Noviembre";
+                        break;
+                    case 12:
+                        b = "Diciembre";
+                        break;
+                    default:
+                        alert("Mes no existe")
+                        break;
+                }
+                var p = "Hoy es " + a + " de " + b + " de " + c;
+                return p;
+            }
+        }
+    </script>
+    <h2>Probando funciones </h2>
+    <script>
+        var dia = Number(prompt("Dia: "));
+        var mes = Number(prompt("Mes: "));
+        var ano = Number(prompt("Año: "));
+        var resultado = fecha(dia, mes, ano);
+        alert(resultado);
+
+
+    </script>
+</body>
+
+</html>

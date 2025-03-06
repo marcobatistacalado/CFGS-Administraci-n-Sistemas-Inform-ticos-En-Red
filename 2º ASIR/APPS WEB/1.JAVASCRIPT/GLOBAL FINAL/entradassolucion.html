@@ -1,0 +1,261 @@
+
+<html>
+
+<head>
+    <style>
+        form {
+            margin: auto;
+            width: 40%;
+            text-align: center;
+        }
+        
+        .centrar {
+            text-align: center;
+        }
+        
+        .dcha {
+            text-align: right;
+        }
+        
+        input,
+        select {
+            border-radius: 5px;
+        }
+        
+        legend {
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
+        
+        span {
+            color: red;
+        }
+        #codigo{
+            display:none;
+        }
+    </style>
+    <script>
+        //campo no vacío y sin espacios (OBLIGATORIO)
+        function hayValor(id) {
+            var RegExp = /^\s+$/;
+            var element = document.getElementById(id);
+            if (element.value.length == 0 || RegExp.test(element.value))
+                return false;
+            return true;
+        }
+        //validar campo de la tarjeta grupos de 4, CON EXPRESIONES REGULARES
+        function validarTar(id) {
+            var RegExp = /[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}/;
+            var element = document.getElementById(id);
+            //Si el valor no se ajusta al patrón, no es una tarjeta correcta
+            if (RegExp.test(element.value) == false)
+                return false;
+            return true;
+        }
+        //validar que el CVV tiene 3 letras
+        function validarCVV(id) {
+            var RegExp = /[0-9]{3}/;
+            var element = document.getElementById(id);
+            //Si el valor no se ajusta al patrón, no es un CVV correcto
+            if (RegExp.test(element.value) == false)
+                return false;
+            return true;
+        }
+
+        //FUNCION AL CLICKAR VALIDAR TODO
+        function validar() {
+            let entradas = 0;
+            //IMPORTANTE
+            error = false
+            //SACAR PRECIO CIUDAD DE UN SELECT
+            let precioCiudad = document.getElementById("ciudad").value;
+            //si es 0 sacamos error
+            if (precioCiudad == "0") {
+                document.getElementById("errCiudad").innerHTML = "Selecciona una ciudad";
+                error = true;
+            }
+            //le pasamos la otra funcion para la comprobocación de obligatoriedad
+            if (hayValor("numentradas") == false) {
+                document.getElementById("errEntradas").innerHTML = "Da un número";
+                error = true;
+            } else {
+                //si es correcto comprobamos que el numero de entradas esta entre 10 y 1 y sino error
+                entradas = parseInt(document.getElementById("numentradas").value);
+                if (entradas < 1 || entradas > 10) {
+                    document.getElementById("errEntradas").innerHTML = "Número incorrecto";
+                    error = true;
+                }
+            }
+            //SACAR PRECIO DEL TIPO QUE ES UN RADIO
+            let tipo = document.getElementsByName("tipo");
+            let seleccion = 0;
+            for (i = 0; i < tipo.length; i++) { //array para recorrer uno a uno 
+                if (tipo[i].checked == true)    
+                    seleccion = tipo[i].value;  //si esta marcada la guardo en rango
+            }
+            //si es 0 error
+            if (seleccion == 0) {
+                document.getElementById("errTipo").innerHTML = "Selecciona un valor";
+                error = true;
+            }
+            //FUNCION OBLIGATORIEDAD
+            if (hayValor("numtar") == false) {
+                document.getElementById("errTar").innerHTML = "Pon tu nº de tarjeta";
+                error = true;
+            } else {
+                //OTRA FUNCION DE 4 GRUPOS DE NUMEROS
+                if (validarTar("numtar") == false) {
+                    document.getElementById("errTar").innerHTML = "formato invalido";
+                    error = true;
+                }
+            }
+            //OBLIGATORIEDAD DEL CVV CAMPO DE TEXTO
+            if (hayValor("numcvv") == false) {
+                document.getElementById("errCvv").innerHTML = "Pon tu CVV";
+                error = true;
+            } else {
+                    //FUNCION PARA QUE SEAN 3 NUMEROS
+                if (validarCVV("numcvv") == false) {
+                    document.getElementById("errCvv").innerHTML = "formato invalido";
+                    error = true;
+                }
+            }
+
+            //VALIDACION DE FECHA DE OBLIGATORIEDAD
+            if (hayValor("caduca") == false) {
+                document.getElementById("errCAD").innerHTML = "Introduce caducidad";
+                error = true;
+            } else {
+                //COGEMOS VALUE DE FECHA, CAMPO TEXTO
+                let vcaduca = document.getElementById("caduca").value;
+                //SEPARAMOS LA CADENA CON UN ARRAY Y VALIDAMOS Q NO ESTE CADUCADA
+                let splitarray = vcaduca.split('/');
+                let hoy = new Date();
+                let añoHoy = hoy.getFullYear() % 100;  //¿¿¿QUE ES ESTO???
+                if (parseInt(splitarray[1]) < añoHoy) {
+                    document.getElementById("errCAD").innerHTML = "Tarjeta caducada";
+                    error = true;
+                }
+                if (parseInt(splitarray[1]) == añoHoy && parseInt(splitarray[0]) < hoy.getMonth() + 1) {
+                    document.getElementById("errCAD").innerHTML = "Tarjeta caducada";
+                    error = true;
+                }
+            }
+
+            //Y YA SI NO HAY NINGUN ERROR HACES LOS CALCULOS
+            if (error == false) {
+                let precio = parseInt(precioCiudad) + parseInt(precioCiudad) * parseInt(seleccion) / 100;
+                //Si han seleccionado el descuento, miro a ver si el código promocional es uno de los dados
+                if (document.getElementById("desc").checked == true) {
+                    codigo = document.getElementById("codigo").value.toUpperCase();
+                    if (codigo == "FRI1")
+                        precio = precio - 2;
+                    if (codigo == "EXAM2")
+                        precio = precio - 3;
+                }
+                precio = entradas * precio;
+
+                //MOSTRAR DIV EL RESULTADO
+                document.getElementById("resultado").innerHTML = "Precio total:" + precio + " euros";
+            }
+        }
+
+        //APARECE UNA CAJA A RELLENAR, INPUT TYPE TEXT - FORMULARIO.
+        function mostrardesc(a) {
+            if (a.checked == true) {
+                document.getElementById("codigo").style.display='inline';
+             
+            } else {
+                document.getElementById("codigo").style.display='none';
+            }
+        }
+
+        //BORRAR ERRORES, EN CASO DE SER CAMBIADOS:
+        function borrar(num) {
+            switch (num) {
+                case 1: //Borrar error del mail
+                    document.getElementById("errCiudad").innerHTML = "";
+                    break;
+                case 2: //Borrar error fecha
+                    document.getElementById("errEntradas").innerHTML = "";
+                    break;
+                case 3: //Borrar error unidades
+                    document.getElementById("errTipo").innerHTML = "";
+                    break;
+                case 4: //Borrar error num_tarjeta
+                    document.getElementById("errTar").innerHTML = "";
+                    break;
+                case 5: //Borrar error cvv
+                    document.getElementById("errCvv").innerHTML = "";
+                    break;
+                case 6: //Borrar error fecha de caducidad
+                    document.getElementById("errCAD").innerHTML = "";
+                    break;
+            }
+        }
+
+        function cambiar(imagen) {
+            imagen.src = "logo2.jpg";
+            document.getElementById("f1").style.backgroundColor = "red";
+            document.getElementById("f2").style.backgroundColor = "red";
+        }
+
+        function restaurar(imagen) {
+            imagen.src = "giradeconciertos.png";
+            document.getElementById("f1").style.backgroundColor = "white";
+            document.getElementById("f2").style.backgroundColor = "white";
+        }
+    </script>
+</head>
+
+<body>
+    <br /><br />
+    <div class="centrar">
+        <img src="giradeconciertos.png" onmouseover="cambiar(this)" onmouseout="restaurar(this)">
+    </div>
+    <br /><br />
+    <form>
+
+        <fieldset id="f1">
+            <legend>Entradas</legend>
+            <p>Ciudad:
+                <select id="ciudad" onfocus="borrar(1)">
+					<option value="0">Anota opcion</option>
+					<option value="30">Madrid</option>
+					<option value="32">Santander</option>
+					<option value="28">Bilbao</option>
+				</select>
+                <span id="errCiudad"></span>
+            </p>
+            <p>N&uacute;mero de entradas:<input type="number" size="2" id="numentradas" min="1" max="10" onfocus=borrar(2)></p>
+            <span id="errEntradas"></span>
+            <p><input type="radio" name="tipo" onchange="borrar(3)" value="0">Pista
+                <input type="radio" name="tipo" onchange="borrar(3)" value="20">Grada
+                <input type="radio" name="tipo" onchange="borrar(3)" value="30">Palco
+            </p>
+            <span id="errTipo"></span>
+            <p><input type="checkbox" id="desc" onchange=mostrardesc(this)>Descuento</p>
+           <!-- El código sólo se muestra si se anota el descuento-->
+              <input type="text" id="codigo" size="5" maxlength="5">
+           
+        </fieldset>
+
+        <br /><br />
+        <fieldset id="f2">
+            <legend>Datos compra</legend>
+
+            <p>N&uacute;mero de tarjeta:<input type="text" size="19" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" id="numtar" onfocus="borrar(4)"> </p>
+            <span id="errTar"></span>
+            <p>fecha de caducidad:<input type="text" placeholder="MM/AA" size="5" id="caduca" onfocus="borrar(6)">
+                <span id="errCAD"></span> <br> código CVV2:<input type="text" size="3" id="numcvv" onfocus="borrar(5)"></p> <span id="errCvv"></span>
+            <p class="dcha"><input type="button" value="COMPRAR" onclick="validar()"></p>
+        </fieldset>
+        <div id=resultado style="text-align: center;"></div>
+    </form>
+
+
+
+
+</body>
+
+</html>

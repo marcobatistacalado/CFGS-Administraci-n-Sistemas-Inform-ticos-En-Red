@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<style type="text/css">
+	body{
+		background-color:blue;}
+		
+	fieldset{
+		
+		width:450px;
+		background-repeat:no-repeat;
+		margin:auto;
+		margin-top:40px;
+		text-align:center;
+	}
+	#container {
+		background-color:rgba(255,255,255,0.8);
+		width: 850px;
+		margin-right: auto;
+		margin-left: auto;
+		height:700px;
+		position:relative;
+		box-shadow:4px 4px 4px #666;
+		top:20px;
+	}
+
+	#contenido{
+		position:absolute;
+		width:563px;
+		left: 145px;
+		top: 180px;
+		height: 450px;
+	}
+	.borde{
+		border-radius:20px;
+		background-color:#EEE;
+	}
+
+		
+	#apDiv7 {
+		position:absolute;
+		width:230px;
+		height:39px;
+		z-index:1;
+		left: 589px;
+		top: 654px;
+		font-style: italic;
+	}
+
+	#container #contenido #form1 p {
+		text-align: center;
+	}
+
+	#cabecera{
+		position:relative;
+		top:50px;
+		width:600px;
+		height:50px;
+		margin:auto;
+		background-color:white;
+		text-align:center;
+		font-size:40px;
+	}
+	</style>
+
+	<script>
+		function calculo(){
+			//validar obligatoriedad del mail (campo de texto)
+			var correo=document.getElementById("mail");
+			var blancos=/^\s+$/;
+			if(correo.value.length==0 || blancos.test(correo.value)){
+                alert("La dirección de correo es un campo obligatorio");
+                correo.focus();
+                return;
+            }
+			//validar que el correo sea correcto con un patrón
+			var RegEx =/[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+			if (RegEx.test(correo.value)==false) {
+				alert('Mail incorrecto');
+				correo.focus();
+				return;
+			}
+			
+			//validar obligatoriedad de la fecha (campos de texto)
+			var dia=document.getElementById("f1");
+			var mes=document.getElementById("f2");
+			var ano=document.getElementById("f3");
+			if(dia.value.length==0 || blancos.test(dia.value)){
+                alert("El dia de la fecha de entrega es un campo obligatorio");
+                dia.focus();
+                return;
+            }
+			if (mes.value.length==0 || blancos.test(mes.value)){
+				alert("El mes de la fecha de entrega es un campo obligatorio");
+				mes.focus();
+				return;
+			}
+			if(ano.value.length==0 || blancos.test(ano.value)){
+				alert("El año de la fecha de entrega es un campo obligatorio");
+				ano.focus();
+				return;
+			}
+			var diaNum=Number(dia.value);
+			var mesNum=Number(mes.value);
+			var anoNum=Number(ano.value);
+			//validar que la fecha sean números
+			if (isNaN(diaNum)){
+				alert("El dia introducido no es numérico");
+				dia.focus();
+				return;
+			}
+			if (isNaN(mesNum)){
+				alert("El mes introducido no es numérico");
+				mes.focus();
+				return;
+			}
+			if (isNaN(anoNum)){
+				alert("El año introducido no es numérico");
+				ano.focus();
+				return;
+			}
+			//validar que la fecha sea correcta
+			if (diaNum > 31 || diaNum < 1 ){
+				alert("El dia tiene que ser entre 1 y 31");
+				dia.focus();
+				return;
+			}
+			if(mesNum > 12 ||mesNum < 1){
+				alert("El mes tiene que ser entre 1 y 12")
+				mes.focus();
+				return;
+			}
+			if (anoNum > 2022 || anoNum < 1){
+				alert("El año tiene que ser entre 1 y 2022");
+				ano.focus();
+				return;
+			}
+			if(mesNum == 7 || mesNum == 8){
+				alert("El mes tiene no puedes ser 7 u 8 (julio/agosto)");
+				mes.focus();
+				return;
+			}
+			//validar que se anote algo en las unidades (campo select)
+			var unidades=document.getElementById("unid");
+            if (unidades.value=="0"){
+                alert("Unidades es un campo obligatorio");
+                unidades.focus;
+                return;
+            }
+
+			//validar que se seleccione si o si el tipo (campo radio)
+			var tip=0;
+            var lista=document.getElementsByName("tipo");
+            for (i=0;i<lista.length;i++){       //array para recorrer uno a uno 
+                    if (lista[i].checked==true){    //si esta marcada la guardo en rango
+                        tip=Number(lista[i].value);
+                    }
+            }
+            if (tip==0){
+                alert("Seleciona el tipo de tarjeta");
+                lista.focus();
+                return;
+            }
+
+			//calculo final, select option su precio
+			var precio=0;
+			switch(unidades.value){
+                case "50":
+                    precio=6;
+                    break;
+                case "100":
+                    precio=9;
+                    break;
+                case "200":
+                    precio=15;
+                    break;
+            }
+			//si el tipo es metálica
+			if (tip == 2){
+				precio=precio+precio*0.2;
+			}
+			//checked comprobación
+			doscaras=document.getElementById("cara");
+            if (doscaras.checked){
+                precio=precio*2;
+            }
+
+			let resultado=document.getElementById("mostrar");
+			resultado.innerHTML="El precio total es "+precio+" €";
+
+
+
+
+}
+
+
+	</script>
+
+</head>
+
+<body>
+
+<div id="container">
+<div id="cabecera">
+TARJETAS DE VISITA
+</div>
+
+<div id="contenido" class="borde">
+	<form id="form1" name="form1" method="post" action="">
+		<fieldset>
+		<legend>Pedido</legend>
+			<br/>
+			
+			<p>Dirección de correo:<input type="text" id="mail"></p>
+			<p>Fecha de entrega:
+			<input type="text" size="2" maxlength="2" id="f1"/>
+			<input type="text" size="2" maxlength="2" id="f2"/>
+			<input type="text" size="4" maxlength="4" id="f3"/>
+			</p>
+			<p>Unidades:
+				<select id="unid">
+					<option value="0">Seleccione número de unidades</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					<option value="200">200</option>
+				</select></p>
+			<p>Tipo
+			<input type="radio" value="1" name="tipo">normal
+			<input type="radio" value="2" name="tipo">metálica</p>
+			
+			<p><input type="checkbox" id="cara">Dos caras</p></fieldset>
+			<p style="text-align:center;"><input type="button" value="Calcular" onclick="calculo()"></p>
+	</form>
+</div>
+<div id="apDiv7">
+	<div id="mostrar" style="color: white;"></div>
+  <p>Copyright salesianasnspilar 2014</p>
+  <p>&nbsp;</p>
+</div>
+</div>
+
+
+</body>
+</html>

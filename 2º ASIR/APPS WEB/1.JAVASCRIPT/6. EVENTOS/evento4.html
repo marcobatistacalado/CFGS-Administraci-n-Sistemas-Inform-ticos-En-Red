@@ -1,0 +1,31 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marco Batista</title>
+
+    <script>
+		color=0;
+		function cambiar(elemento){
+			switch  (color){
+                case 0: elemento.style.color="red";
+                        color ++;
+                        break;
+                case 1: elemento.style.color="green";
+                        color ++;
+                        break;
+                case 2: elemento.style.color="blue";
+                        color=0;
+                        break;
+            }
+		}
+		
+    </script>
+</head>
+
+<body >
+<p onclick="cambiar(this)">soy tu gatita</p>
+</body>
+</html>

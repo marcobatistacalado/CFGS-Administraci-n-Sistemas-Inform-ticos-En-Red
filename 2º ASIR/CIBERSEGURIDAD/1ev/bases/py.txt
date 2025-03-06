@@ -1,0 +1,20 @@
+#comentario
+“”” comentario de varias líneas”””
+def nombre (variables) ->definir función
+ () los paréntesis por si quieres pasar datos
+: para decir que ahí empieza la función 
+
+print es como el echo
+raw_input para pedir por teclado
+input para versiones nuevas
+int para convertir números enteros
+BUCLES: llamada a función dentro de otra función, y terminar con un if.
+
+import -> incluir herramientas, ficheros, directorios, librerías
+	funciones os (librería)
+		listdir() -> para listar el contenido de una carpeta
+		path.isdir() -> saber si es un directorio
+		system() -> nos permite ejecutar un comando
+		otra librerías: subprocess.run ()-> funciona con la versión + actualizada. Time
+		path.join: para concatenar tanto en windows como en linux -> /linux, \windows 
+		otras librerías: endswith-> acaba en

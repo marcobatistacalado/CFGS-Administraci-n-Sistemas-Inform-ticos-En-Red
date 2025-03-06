@@ -1,0 +1,29 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marco Batista</title>
+
+</head>
+
+<body>
+	<script>
+        var num=Number(prompt("Introduce un numero del 1 al 10: "))
+        if ( num < 1 && num > 10){
+            alert("No es un numero entre el 1 y el 10")
+        }
+        else{
+            var aleatorio=Math.random()*10;
+            var aleatorio1=Math.round(aleatorio);    
+            if (aleatorio1 == num){
+                alert("Genial has tenido suerte, es el mismo numero")
+            }     
+            else{
+                alert("lo siento no es el mismo numero")
+            }
+        }
+    </script>
+</body>
+</html>

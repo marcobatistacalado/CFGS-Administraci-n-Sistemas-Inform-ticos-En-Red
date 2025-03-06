@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+    <script>
+        function producto(a,b){
+            let p;  /*variable local*/
+            p=a*b;
+            return p;
+        }
+    </script>
+    <h2>Probando funciones </h2>
+    <script>
+        var num1=Number(prompt("Anota numero uno: "));
+        var num2=Number(prompt("Anota numero dos: "));
+        var resultado=producto(num1,num2);
+        alert(resultado);
+        alert(p); /*no muestra nada de p pq es una variable local */
+    
+    </script>
+</body>
+</html>

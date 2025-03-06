@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+<script>
+var nombre= prompt("Introduce tu nombre: ");
+var respond= parseInt(prompt("Introduce preguntas hechas: "));
+var correcta= parseInt(prompt("Introduce preguntas correctas: "));
+var porcentaje=(correcta*100)/respond;
+
+if (porcentaje>=90)
+    document.write("Nivel superior");
+else
+    if (porcentaje>=75 && porcentaje<90)
+        document.write("Nivel medio");
+    else
+        if (porcentaje>=50 && porcentaje<75)
+            document.write("Nivel regular");
+        else
+            document.write("Fuera de nivel");
+            
+</script>
+</body>
+</html>

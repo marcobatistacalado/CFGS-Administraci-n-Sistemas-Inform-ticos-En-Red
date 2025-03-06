@@ -1,0 +1,35 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Marco Batista</title>
+
+    <script>
+       function total(){
+            //validación usuario
+            var validar1=/^[6|9]\d{8}$/; // \w equivale a [a-zA-Z0-9_] 
+            var usuario=document.getElementById("usu"); //cogemos dato por id, pero lo anotado va a estar en el value
+            if (validar1.test(usuario.value)==false){   //aqui agregamos que sea el value y lo pasamos por la validación
+                alert("TO MAL");
+                usuario.focus; //para que se coloque en la casilla que debe rellenar bien
+                return;
+            }
+            else {
+                alert("bieeeeeeeeeeen");
+                usuario.focus; //para que se coloque en la casilla que debe rellenar bien
+                return;
+            }
+       }
+    </script>
+</head>
+
+<body>
+<p>PROBANDO EXPRESIONES NUMERICAS... </p>
+<form>
+    <p>Clave de usuario:<input type="password" id="usu"></p>
+    <input type="button" value="Informacion" onclick="total()">
+</form>
+</body>
+</html>

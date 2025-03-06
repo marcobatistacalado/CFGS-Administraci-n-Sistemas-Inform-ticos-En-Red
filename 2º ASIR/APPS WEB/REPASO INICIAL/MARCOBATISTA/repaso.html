@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <div id="cabecera">
+        <div id="titulo">
+            <p>INVESFARMA</p>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="lista">
+            <ul>
+                <li><a href="repaso.html">Home</a></li>
+                <li><a href="#final">Final</a></li>
+                <li><a href="https://ww.fitoterapia.net" target="_blank">Web</a></li>
+                <li><a href="repaso.html">Contacta</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="container">
+        <div id="tit">
+            Contacto
+        </div>
+        <form>
+            Nombre y apellidos: 
+            <br/<br/><input type="text" name="firstname" required><br/><br/>
+            Correo: <input type="email" required><br/><br/>
+            Seleccionar tipo de contacto 
+            <select name="contacto">
+                <option value="comercial">Comercial</option>
+                <option value="consulta">Consulta</option>
+                <option value="varios" selected>Varios</option>
+            </select><br/><br/>
+            Introduce un telefono de contacto <br/><br/>
+            <input type="text"><br/><br/>
+            Comentario<br/><br/>
+            <textarea name="message" rows="6" cols="70"></textarea><br/><br/>
+            <div id="posicionarboton"><input type="submit" value="Enviar" ></div>
+        </form>
+        
+    </div>
+
+    <a name="final"></a>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@font-face {
+    font-family: tipografia;
+    src: url(./AllerDisplay.ttf);
+}
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    font-size: 20px;
+    font-family: tipografia;
+
+}
+body{
+    background-image: url(./DSC_0374_1250.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cabecera{
+    height: 95px;
+    background-color: #74AFAD;
+}
+#titulo{
+    text-shadow: 2px 2px 2px black;
+    width: 960px;
+    margin:auto;
+    color: white;
+    overflow: auto;
+    padding-top: 12px;
+}
+#titulo p{
+    font-size: 70px;
+}
+#menu{
+    margin: auto;
+    background-color: #558C89;
+    overflow: auto;
+    height: 80px;
+}
+#lista{
+    max-width: 960px;
+    margin:auto;
+
+}
+#lista li{
+    display: inline-block;
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    width: 14%;
+    padding: 5px;
+    font-size: 17px;
+    padding-top: 25px;
+}
+
+#lista li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 2s;
+    display: block;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+#lista li a:hover{
+    background-color: #ed923a;
+
+}
+#container{
+    width: 960px;
+    margin: auto;
+    background-color: #ECECEA;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding:10px;
+}
+#container form{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+#tit{
+    background-color: #ed923a;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#posicionarboton{
+    text-align: center;
+}

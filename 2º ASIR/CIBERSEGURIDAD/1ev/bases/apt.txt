@@ -1,0 +1,72 @@
+Hacker informático: introducirse en sistemas ajenos.
+Hacker ético - Pentester
+     ↪PENTESTING: penetrar el sistema
+FASES:
+1.Reconocimiento (footprinting): Conseguir la mayor cantidad de información del objetivo
+	a.Técnicas OSINT (Open Source Intelligence)
+	  I. Empresa
+		1.Búsqueda en Google (Página Web/Foros,redes sociales->DNS/Sitios Web/Personas,documentos->Ip's/Proveedores->Geolocalización/Emails,teléfonos,documentos
+		2.Directorios de empresas -> Sede, datos de contacto,…
+		3.Compra/venta de datos
+		4.Programas de análisis
+	  II. Intrusión física: información de la empresa
+	  III. Ingeniería social: información de los empleados
+	  IV. Información de redes, direcciones IPs: Escaneo
+	b. httrack www.scanme.test -o /home/admin/sitios/scanme
+	c. wget-r www.scanme.test
+2. Escaneo (scanning): sistema operativo, red…
+	a.Averiguar hosts activos, servicios, sistemas operativos, aplicaciones…
+	b.Subfases:
+	  I. Análisis de vulnerabilidades: saber si esos programas/S.O. tienen vulnerabilidades de las que nos podamos aprovechar. (Hay BBDD en internet de muchísimas vulnerabilidades).
+	  II. Enumeración: mediante protocolos conseguir una lista de usuarios, recursos compartidos… (Ej: tiene una carpeta compartida voy a ver que tiene detrás…)
+	  III. Protocolos:
+		ICMP: barrido ping: conexión (TCP/UDP: puertos abierto, cerrado, filtrado (firewall), no filtrado, mixto.
+		TCP: orientado a conexión (3 way handshake) y confirmado
+		Persona 1 - SYN: quiero hablar contigo
+		Persona 2 -  SYN+ACK: me ha llegado la petición y la acepto
+		Persona3 - ACK: me ha llegado la confirmación que quieres hablar conmigo
+		6 flags: SYN, ACK, RST, FIN, URG, PSH
+		Ejemplo: Halfscan→ACK→no se manda si quieres hacer un escaneo 
+			para evitar ser detectado (si se completa la comunicación - se registra).
+
+	c.Network Mapping:  nmap [tipo_escaneo] [opciones] [red/host] ->
+	  I.VERSIÓN GRÁFICA: zenmap
+	  II.[tipo_escaneo]
+		-sn (ping)
+		-sU (udp)
+		-sS (tcp half)-> envía la señal de sincronización
+		-sT (tcp full)-> funcionamiento normal del TCP
+		-sF (tcp fin)-> envía solo la señal de finalización
+		-sN (tcp null)-> envía un paquete tcp sin ningún flag activo
+		-sX (tcp xmas)-> activa las banderas que no son típicas (URG, PSH)
+		-sA (tcp ack)-> envía un mensaje a alguien que no le ha pedido nada.
+	  III.[opciones]
+		-v (info)
+		-sV (servicios)
+		-O (sistema operativo) 
+		-A (aplicaciones)
+		-Tnº (temporizador, ej. -T4)
+ 
+3.Conseguir acc.eso (exploit): fallos de seguridad en el S.O. etc
+	a.Hacker malo
+	  I.Mantener acceso, sacar información, “dañar” 
+	  II.Borrar huellas
+	b.Hacker ético
+	  I.Escribir un informe
+	  II.Presentar informe de auditoría de seguridad
+TIPOS:
+-Interno: te doy tarjeta de entrada, te creo un usuario dentro de la empresa… 
+-Externo: sin ninguna facilidad, desde fuera.
+
+MODALIDADES:
+-Black Box: ataque a ciegas, la empresa no te da nada.
+-Grey Box:  punto medio entre Black box y White box (parcial)
+-White Box: la empresa te facilita datos como el mapa de red o te crea un usuario (facilitación de acceso).
+
+SERVICIOS ADICIONALES:
+-Ingeniería social: obtener información confidencial a través de la manipulación de usuarios legítimos.
+-Wardialing: técnica utilizada durante las décadas de los años 1980 y 1990, que consistía en hacer llamadas a una serie de números de teléfono automáticamente con el fin de encontrar módems conectados y permitiendo la conexión con algún otro ordenador.
+-Seguridad física: Información pública, nos intentamos hacer con la mayoría y luego filtrar esa información con una herramienta. Filtrar con bash y javascript
+Osint: inteligencia de fuentes abiertas
+
+

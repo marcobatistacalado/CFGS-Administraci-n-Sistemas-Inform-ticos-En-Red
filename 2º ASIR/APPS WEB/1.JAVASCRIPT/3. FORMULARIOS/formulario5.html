@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body style="margin:20px;">
+    <h1 style="color: red;">COMPRA DE ENTRADAS</h1>
+    <script>
+        function validar(){
+            precio=10;
+            var rango="";
+            var lista=document.getElementsByName("rangoedad");
+            var diadelasemana=document.getElementById("diasem").value;
+            for (i=0;i<lista.length;i++){       //array para recorrer uno a uno 
+                    if (lista[i].checked==true){    //si esta marcada la guardo en rango
+                        rango=lista[i].value;
+                    }
+            }
+            if (rango==""){
+                alert("seleciona la edad");
+                return;
+            }
+            var min=document.getElementById("minus").checked;
+            if(min==true){
+                precio=4;
+                if (diadelasemana=="Martes" && rango=="menor"){ //aqui se pone porque es acumulable los descuentos a la minusvalia
+                    precio=precio-2;
+                }
+                if ((diadelasemana=="Sabado" || diadelasemana=="Domingo") && rango=="jubilado"){
+                    precio=precio-3;
+                }
+            }
+            else{
+                precio=10;
+                if (diadelasemana=="Martes" && rango=="menor"){
+                    precio=precio-2;
+                }
+                if ((diadelasemana=="Sabado" || diadelasemana=="Domingo") && rango=="jubilado"){
+                    precio=precio-3;
+                }
+            }
+            document.getElementById("preciofinal").innerHTML="El precio de la entrada es: "+precio+"€";
+        }
+            
+            
+        
+    </script>
+    <form name="miformulario">
+        <p>Dia de la semana: 
+            <select name="diasemana" id="diasem" >
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miercoles">Miercoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sabado">Sabado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+        </p>
+        <p>Rango edad:
+            <input type="radio" name="rangoedad" value="menor" >Menor
+            <input type="radio" name="rangoedad" value="jubilado" >Jubilado
+            <input type="radio" name="rangoedad" value="otros" >Otros
+        </p>
+        <p>Minusvalia:
+            <input type="checkbox" id="minus"><br/><br/>
+        </p>
+        
+        
+        <p><input type="button" value="ENVIAR" onclick="validar()"></p>
+    </form>
+    <div id="preciofinal"></div>
+
+ 
+</body>
+</html>

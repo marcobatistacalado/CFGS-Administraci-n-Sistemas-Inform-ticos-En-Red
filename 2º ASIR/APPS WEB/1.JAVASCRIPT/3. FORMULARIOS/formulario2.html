@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+    <script>
+        function validar(){
+            let cantidad=document.getElementById("cant").value;
+            if (isNaN(Number(cantidad))){
+                alert("No has anotado números en la cantidad");
+                document.getElementById("cant").focus();
+                return;
+            }
+            let menusaso= document.getElementById("menu").value;
+            let precio= Number(menusaso)*Number(cantidad);
+
+            document.getElementById("preciofinal").value=precio;
+            //cuando usamos un input de texto
+        
+            
+        }
+        
+    </script>
+    <form name="miformulario">
+        <p>Cantidad <input type="text" id="cant"></p>
+
+        <p>Tipo:
+        <select id="menu">
+            <option value="4">Queso</option>
+            <option value="6">Jamon y queso</option>
+            <option value="10">Especial</option>
+        </select>
+        </p>
+        
+        <p><input type="button" value="REGISTRAR" onclick="validar()"></p>
+        <p>Precio a pagar:  <input type="text" id="preciofinal" readonly></p>
+    </form>
+    <div id="preciofinal"></div>
+
+ 
+</body>
+</html>

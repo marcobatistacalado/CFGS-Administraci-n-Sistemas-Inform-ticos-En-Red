@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Untitled Document</title>
+
+    <style type="text/css">
+        body {
+            font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+            background: #42413C;
+            padding: 0;
+            color: #000;
+            font-family: pueblo;
+        }
+        
+        @font-face {
+            font-family: pueblo;
+            src: url(caligrafia.ttf);
+        }
+        /* ~~ Element/tag selectors ~~ */
+        /* ~~ this fixed width container surrounds the other divs ~~ */
+        
+        .container {
+            width: 960px;
+            background: #FFF;
+            margin: 0 auto;
+            /* the auto value on the sides, coupled with the width, centers the layout */
+            margin-top: 20vh;
+        }
+        /* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+        
+        .header {
+            background: #ADB96E;
+            font-size: 60px;
+            padding-left: 50px;
+            height: 100px;
+            position: relative;
+            text-align: center;
+        }
+        
+        .content {
+            padding: 20px 0;
+            text-align: center;
+        }
+        /* ~~ The footer ~~ */
+        
+        .footer {
+            padding: 10px;
+            background: #CCC49F;
+            font-style: italic;
+        }
+        
+        .container .footer p {
+            font-style: italic;
+            text-align: right;
+            font-size: 14px;
+        }
+        
+        p {
+            font-size: 14%;
+        }
+        
+        p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header"> Movil Telephone
+
+        </div>
+
+        <div class="content">
+            <h1>Area clientes</h1>
+            <form action="recargar.php" method="POST">
+                <p>Telefono: <input type="text" name="tel">
+                </p>
+                <p>Clave acceso: <input type="password" name="clave"></p>
+                <p>Importe a recargar:
+                    <input type="text" name="imp"></p>
+                <input type="submit" value="RECARGAR">
+
+            </form>
+        </div>
+        <div class="footer ">
+            <p>Copyright SalesianasNSPilar</p>
+            <!-- end .footer -->
+        </div>
+        <!-- end .container -->
+    </div>
+</body>
+
+</html>

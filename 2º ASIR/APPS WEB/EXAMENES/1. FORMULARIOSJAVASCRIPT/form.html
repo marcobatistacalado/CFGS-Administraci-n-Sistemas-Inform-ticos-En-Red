@@ -1,0 +1,123 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<style type="text/css">
+		body {
+			background-color: orange;
+		}
+
+		fieldset {
+
+			width: 450px;
+			background-repeat: no-repeat;
+			margin: auto;
+			margin-top: 40px;
+			text-align: center;
+		}
+
+		#container {
+			background-color: rgba(255, 255, 255, 0.8);
+			width: 850px;
+			margin-right: auto;
+			margin-left: auto;
+			height: 700px;
+			position: relative;
+			box-shadow: 4px 4px 4px #666;
+			top: 20px;
+		}
+
+		#contenido {
+			position: absolute;
+			width: 563px;
+			left: 145px;
+			top: 180px;
+			height: 450px;
+		}
+
+		.borde {
+			border-radius: 20px;
+			background-color: #EEE;
+		}
+
+
+		#apDiv7 {
+			position: absolute;
+			width: 230px;
+			height: 39px;
+			z-index: 1;
+			left: 589px;
+			top: 654px;
+			font-style: italic;
+		}
+
+		#container #contenido #form1 p {
+			text-align: center;
+		}
+
+		#cabecera {
+			position: relative;
+			top: 50px;
+			width: 600px;
+			height: 50px;
+			margin: auto;
+			background-color: orange;
+			text-align: center;
+			font-size: 40px;
+		}
+
+		#resultado {
+			position: relative;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	
+
+	<div id="container">
+		<div id="cabecera">FACTURA TELEFONO</div>
+
+		<div id="contenido" class="borde">
+			<form id="form1" name="form1" method="post" action="">
+				<fieldset>
+					<legend>Datos factura</legend>
+					<br />
+					<p>telefono:<input type="text" size=9></p>
+					<p>dni:<input type="text" size=9></p>
+					<p>Tipo de tarifa:<select name="tarifa">
+							<option>Anote tipo de tarifa</option>
+							<option>Básica</option>
+							<option>Amiga</option>
+							<option>Plus</option>
+						</select></p>
+
+					<p>Minutos llamadas fijos:<input type="text" size=4 value="0"></p>
+					<p>Minutos llamadas móviles:<input type="text" size=4 value="0"></p>
+
+					<p>Datos
+						<input type="radio">5 GB
+						<input type="radio">10 GB
+						<input type="radio">Ilimitados
+					<p><input type="checkbox">Oferta promoción</p>
+				</fieldset>
+				<p><input type="button" value="Seguir"/><input name="" type="reset"
+						value="Borrar" /></p>
+			</form>
+			
+		</div>
+
+		<div id="apDiv7">
+			<p>Copyright salesianasnspilar 2022</p>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

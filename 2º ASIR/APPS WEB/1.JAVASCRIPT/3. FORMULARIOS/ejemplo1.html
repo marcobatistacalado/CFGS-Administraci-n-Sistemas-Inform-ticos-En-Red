@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> PROBANDO JAVASCRIPT </title>
+</head>
+<body>
+    <script>
+        function Calcprecio(){
+            let p;  
+            let imp= Number(document.getElementById("pr").value);
+            let desc= Number(document.getElementById("dsc").value);
+            p=imp-((desc*imp)/100);
+            //alert(p); esto es para mostrarlo de forma sencilla
+            document.getElementById("resul").value=p; //metes ahi la p
+        }
+    </script>
+    <form name="probar">
+        <p>Anota precio <input type="text" name="precio" id="pr"></p>
+        <p>Anota descuento <input type="text" name="descuento" id="dsc"></p>
+        <p><input type="button" value="Calcular" onclick="Calcprecio()"></p>
+        <p>Importe final: <input type="text" id="resul"></p><!--aqui nos hemos llecado la p-->
+    </form>
+    <!--<script>
+        var num1=Number(prompt("Introduce importe: "));
+        var num2=Number(prompt("Introduce decuento: "));
+        var resultado=precio(num1,num2);
+        alert("Descontado es: "+resultado);
+    </script>!-->
+</body>
+</html>

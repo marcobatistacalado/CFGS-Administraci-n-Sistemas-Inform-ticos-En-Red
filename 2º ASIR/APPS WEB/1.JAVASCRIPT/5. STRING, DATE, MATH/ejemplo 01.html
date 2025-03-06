@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> PROBANDO JAVASCRIPT </title>
+<script>
+// sacar la fecha del sistema
+var fechaHoy = new Date();
+alert (fechaHoy);
+
+// construir una fecha sabiendo día, mes y año
+var fechaNac = new Date(1999,9,7);
+alert (fechaNac); // Thu Oct 07 1999 00:00:00 GMT+0200
+
+
+Fecha=new Date (2019,10,27,11,20,22);
+alert (Fecha.toDateString()) ; // Wed Nov 27 2019
+alert (Fecha.toTimeString()) ; // 11:20:22 GMT+0100
+alert (Fecha.toLocaleDateString());//	27/11/2019
+alert (Fecha.toLocaleTimeString());//	11:20:22 	
+
+Fecha=new Date (2019,12,45)
+alert(Fecha.toLocaleDateString()); //  14/2/2020
+Fecha=new Date (2019,9)
+alert(Fecha.toLocaleDateString()); //  1/10/2019
+Fecha=new Date (2019,12, 'a')
+alert(Fecha.toLocaleDateString()); // Invalid Date
+
+</script>
+</head>
+<body>
+PROBANDO JAVASCRIPT
+</body>
+</html>
